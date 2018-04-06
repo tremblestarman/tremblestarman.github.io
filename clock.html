@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome</title>
+
+<link rel="stylesheet" href="time/css/clock of time.css" media="screen" type="text/css" />
+
+<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" /> 
+<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" /> 
+<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+
+</head>
+
+<body>
+
+<div class="fill">
+	<div class="reference"></div>
+	<div class="clock" id="utility-clock">
+		<div class="centre">
+			<div class="dynamic"></div>
+			<div class="expand round circle-1"></div>
+			<div class="anchor hour">
+				<div class="element thin-hand"></div>
+				<div class="element fat-hand"></div>
+			</div>
+			<div class="anchor minute">
+				<div class="element thin-hand"></div>
+				<div class="element fat-hand minute-hand"></div>
+			</div>
+			<div class="anchor second">
+				<div class="element second-hand"></div>
+			</div>
+			<div class="expand round circle-2"></div>
+			<div class="expand round circle-3"></div>
+		</div>
+	</div>
+</div>
+
+<!--//-->
+<script type="text/javascript" src="time/js/jquery.js"></script>
+
+<link type="text/css" rel="stylesheet" href="time/css/time_css.css" />
+
+</head>
+
+<body>
+
+<script language="javascript">
+var ta = new Date();
+var hour = ta.getHours();
+function backg(){
+	if (hour > 22 && hour <= 4) {//22-4
+		$('.bg').css('backgroundColor','#4682B4');
+		$('.time').css('backgroundColor','#4169FF');
+	} 
+	else if (hour > 4 && hour <= 10) {//4-10
+		$('.bg').css('backgroundColor','#d13c36');
+		$('.time').css('backgroundColor','#e45534');
+	} 
+	else if (hour > 10 && hour <= 16) {//10-16
+		$('.bg').css('backgroundColor','#228b22');
+		$('.time').css('backgroundColor','#3cb371');	
+	} 
+	else {//16-22
+		$('.bg').css('backgroundColor','#daa520');
+		$('.time').css('backgroundColor','#ffd700');
+	}
+}
+
+var t = new Date();
+var day = t.getDate();
+var h = t.getHours();
+var m = t.getMinutes();
+var sed = t.getSeconds();
+var gameTime = (30-day)*24*3600 - h*3600 - m*60 - sed ;
+
+function bar(){
+	j = 360*(gameTime/777600);
+	if (1-gameTime/777600 <= 0.5){
+		$(".pie2").css("-o-transform","rotate(" + j + "deg)");
+		$(".pie2").css("-moz-transform","rotate(" + j + "deg)");
+		$(".pie2").css("-webkit-transform","rotate(" + j + "deg)");
+	}
+	else {	
+		j = j-180
+		$(".pie1").css("-o-transform","rotate(" + j + "deg)");
+		$(".pie1").css("-moz-transform","rotate(" + j + "deg)");
+		$(".pie1").css("-webkit-transform","rotate(" + j + "deg)");
+	
+		if (hour > 22 && hour <= 4) {//22-4
+			$('.pie2').css('backgroundColor','#4682B4');
+		} 
+		else if (hour > 4 && hour <= 10) {//4-10
+			$('.pie2').css('backgroundColor','#d13c36');
+		} 
+		else if (hour > 10 && hour <= 16) {//10-16
+			$('.pie2').css('backgroundColor','#228b22');
+		}
+			else {//16-22
+			$('.pie2').css('backgroundColor','#daa520');
+		}
+	}
+}
+
+setInterval("show()",100);
+setInterval("bar()",100);
+setInterval("backg()",100);
+
+function show(){
+	var t = new Date();
+	var day = t.getDate();
+	var h = t.getHours();
+	var m = t.getMinutes();
+	var sed = t.getSeconds();
+	var gameTime = (30-day)*24*3600 - h*3600 - m*60 - sed ;
+	
+	$(".time").html(gameTime + "s");
+}
+</script>
+<!--//-->
+
+<script type="text/javascript" src="time/js/core of time.js"></script>
+<div style="text-align:center;">
+</div>
+
+
+</body>
+</html>

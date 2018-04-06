@@ -1,5 +1,598 @@
-<html>
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<title>Home</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/templatemo_style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body,td,th {
+	font-family: 微软雅黑;
+	color: #CCCCCC;
+}
+body {
+	background-color: #333333;
+}
+.STYLE1 {
+	font-family: "微软雅黑";
+	color: #FF6600;
+}
+.STYLE3 {
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+}
+.STYLE2 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.STYLE4 {color: #CCCCCC}
+.STYLE6 {color: #909090}
+.STYLE7 {font-weight: bold; color: #8C8C8C;}
+.STYLE9 {
+	color: #666666;
+	font-weight: bold;
+}
+.STYLE10 {
+	color: #999999;
+	font-weight: bold;
+}
+.STYLE11 {color: #666666}
+.STYLE12 {
+	color: #0033FF;
+	font-family: "黑体";
+}
+.STYLE13 {color: #FFFFFF}
+.STYLE20 {
+	color: #CC0000;
+	font-size: 18px;
+}
+.STYLE22 {color: #CC0000}
+.STYLE24 {font-size: 18px}
+.STYLE25 {color: #009900}
+.STYLE26 {
+	font-family: "黑体";
+	font-weight: bold;
+}
+.STYLE27 {color: #FFCC00}
+.STYLE28 {
+	color: #000000;
+	font-family: Minecraft;
+	font-size: 135%;
+}
+.STYLE29 {color: #0066CC}
+.STYLE30 {color: #006600}
+.STYLE31 {color: #FF9900}
+.STYLE32 {color: #333333}
+.STYLE33 {color: #8E0000}
+.STYLE34 {
+	font-size: 10px;
+	color: #FFCC00;
+	font-family: "微软雅黑";
+}
+.STYLE35 {
+	font-size: 10px;
+	color: #000000;
+	font-family: "微软雅黑";
+}
+.STYLE36 {
+	font-size: 35px;
+	color: #000000;
+	font-family: "微软雅黑";
+}
+-->
+</style>
+<script type="text/javascript" src="time/js/jquery.js"></script>
+</head>
 <body>
-<h1>test</h1>
+<script type="text/javascript">
+	function getBackground0()
+	{
+		document.body.style.background = "#0066CC";
+		i = parseInt("0066CC",16);
+		r = Math.floor(i / 65536);
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		i = (r+16)*65536+(g+16)*256+b+16;
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j);
+		$(".border-right").css("background-color","#"+j);
+		$(".border-left").css("background-color","#"+j);
+		$(".border-bottom").css("background-color","#"+j);
+		$(".shape-1").css("background-color","#"+j);
+		$(".shape-2").css("background-color","#"+j);
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+	}
+	function getBackground1()
+	{
+		document.body.style.background = "#8E0000";
+		i = parseInt("8E0000",16);
+		r = Math.floor(i / 65536);
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		i = (r+16)*65536+(g+16)*256+b+16;
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j);
+		$(".border-right").css("background-color","#"+j);
+		$(".border-left").css("background-color","#"+j);
+		$(".border-bottom").css("background-color","#"+j);
+		$(".shape-1").css("background-color","#"+j);
+		$(".shape-2").css("background-color","#"+j);
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+	}
+	function getBackground2()
+	{
+		document.body.style.background = "#006600";
+		i = parseInt("006600",16);
+		r = Math.floor(i / 65536);
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		i = (r+16)*65536+(g+16)*256+b+16;
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j);
+		$(".border-right").css("background-color","#"+j);
+		$(".border-left").css("background-color","#"+j);
+		$(".border-bottom").css("background-color","#"+j);
+		$(".shape-1").css("background-color","#"+j);
+		$(".shape-2").css("background-color","#"+j);
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+	}
+	function getBackground3()
+	{
+		document.body.style.background = "#333333";
+		i = parseInt("333333",16);
+		r = Math.floor(i / 65536);
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		i = (r+16)*65536+(g+16)*256+b+16;
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j);
+		$(".border-right").css("background-color","#"+j);
+		$(".border-left").css("background-color","#"+j);
+		$(".border-bottom").css("background-color","#"+j);
+		$(".shape-1").css("background-color","#"+j);
+		$(".shape-2").css("background-color","#"+j);
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+	}
+	function getBackground4()
+	{
+		document.body.style.background = "#FFFFFF";
+		i = parseInt("FFFFFF",16);
+		r = Math.floor(i / 65536);
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		i = (r+16)*65536+(g+16)*256+b+16;
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j);
+		$(".border-right").css("background-color","#"+j);
+		$(".border-left").css("background-color","#"+j);
+		$(".border-bottom").css("background-color","#"+j);
+		$(".shape-1").css("background-color","#"+j);
+		$(".shape-2").css("background-color","#"+j);
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+		$(".overlay h4 a ").css("color","#000000");
+	}
+	function messageBackGround()
+	{
+		alert("T -> Blue\nR -> Red\nE -> Green\nM -> Gray"); 
+	}
+	function str_pad(hex)
+	{
+   		var zero = '000000';
+   		var tmp  = 6-hex.length;
+   		return zero.substr(0,tmp) + hex;
+	}
+</script>
+
+	<header class="site-header container animated fadeInDown">
+		<div class="header-wrapper">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="site-branding">
+					  <h2 align="left" class="STYLE26"><a class="STYLE28"><span class="STYLE4" id="bg1" onClick="getBackground4()">2 </span><span class="STYLE29" id="bg1" onClick="getBackground0()">t</span><span class="STYLE33" id="bg1" onClick="getBackground1()"> r</span><span class="STYLE30" id="bg1" onClick="getBackground2()"> e</span><span class="STYLE32" id="bg1" onClick="getBackground3()"> M</span><span class="STYLE4" id="bg1" onClick="getBackground4()"> B</span></a></h2>
+				  </div>
+				</div>
+				<a href="#" class="toggle-nav hidden-md hidden-lg">
+					<i class="fa fa-bars"></i>
+				</a>
+				<div class="col-md-8">
+					<nav id="nav" class="main-navigation hidden-xs hidden-sm">
+						<ul class="main-menu">
+							<li><a class="show-1 active homebutton" href="#">索引</a></li>
+							<li><a class="show-2 aboutbutton" href="#">我是谁</a></li>
+							<li><a class="show-3 projectbutton" href="#">辅助软件</a></li>
+							<li><a class="show-4 blogbutton" href="#">我隶属于CBL</a></li>
+							<li><a class="show-5 contactbutton" href="#">这个页面还没有功能</a></li>
+						</ul>
+					</nav>
+					<nav class="main-navigation menu-responsive hidden-md hidden-lg">
+						<ul class="main-menu">
+							<li><a class="show-1 active homebutton" href="#">索引</a></li>
+							<li><a class="show-2 aboutbutton" href="#">我是谁</a></li>
+							<li><a class="show-3 projectbutton" href="#">辅助软件</a></li>
+							<li><a class="show-4 blogbutton" href="#">我隶属于CBL</a></li>
+							<li><a class="show-5 contactbutton" href="#">这个页面还没有功能</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<div id="menu-container">
+		<div id="menu-1" class="homepage home-section container">
+			<div class="home-intro text-center">
+				<h2 class="fadeInLeft animated welcome-title STYLE31"><strong>这是那些你需要的索引</strong></h2>
+				<p class="animated fadeInRight"><span class="blue STYLE24"><strong>致力于Minecraft</strong></span><span class="STYLE24"><br><span class="green STYLE25"><strong>还有Minecraft</strong></span><br>
+				<span class="green  STYLE22"><strong>还有Minecraft</strong></span></span><span class="STYLE20"></span></span></p>
+				<ul class="list-icons animated fadeInUp">
+				  <a href=" " class="STYLE27"> <span class="STYLE26 STYLE11">个人链接 : </span><br>
+				  </a>
+				  <a href="http://i.youku.com/tremblestarman" target="_blank"><img src="img/youku.png" width="64" height="64" longdesc="http://i.youku.com/tremblestarman"></i></li></a>
+				  <a href="http://weibo.com/TrembleSt" target="_blank"><img src="img/xinlang.png" width="64" height="64" longdesc="http://weibo.com/TrembleSt"></a>
+				  <a href="http://space.bilibili.com/1398247" target="_blank"><img src="img/bilibili.png" width="64" height="64" hspace="32" longdesc="http://space.bilibili.com/1398247"></a>
+				  <a href="http://www.mcbbs.net/?160123" target="_blank"><img src="img/Grass.png" width="64" height="64"></a>
+				</ul>
+			</div>
+			<div class="home-projects">
+			  <div class="row">
+					<div class="col-md-6 col-sm-12"><!--左侧-->
+					  <div class="project-title animated fadeInUp"><!--L1-->
+							<h2 class="STYLE1">游戏技巧研究索引贴</h2>
+							<a href="http://www.mcbbs.net/thread-237123-1-1.html" target="_blank"><img src="img/Crafting_Table.png" longdesc="http://www.mcbbs.net/thread-237123-1-1.html"></a>
+							<p align="left"><span class="STYLE2">这是本人的游戏技巧索引</span><br><br>  
+						      <span class="STYLE6">索引涵盖了Minecraft中自1.5版本开始本人对于游戏机制（包括命令方块、红石、材质等）研究和教程，同时包含了从2014年初（本人开始着手于研究游戏机制的时间）到现在所有在Minecraft中的游戏成果。（地图或者存档）<br><br>
+					          索引正式更新时间为1.7时代，并随着版本的跟进先后经历了1.7的发展、1.8的高潮、1.9的改变，到如今的平稳。</span><br><br>
+							  <span class="STYLE4">让我们继续下去，不止做一名玩家，更要做一名探索者，一起探寻游戏机制，去挖掘机制背后的特性，去利用特性背后的新技巧.</span><br><br>
+				            <span class="STYLE7">最后，展望新版本，掌握新特性，将思想融入这个多元化机制的游戏中</span></p>
+							<p align="center"><a href="http://www.mcbbs.net/thread-237123-1-1.html" target="_blank" class="blog-button">View</a></p>
+					  </div>
+					  <div class="project-title animated fadeInUp"><!--L2-->
+							<h2 class="STYLE12">模块索引贴</h2>
+							<a href="http://www.mcbbs.net/thread-460476-1-1.html" target="_blank"><img src="img/Repeating_Command_Block.gif" longdesc="http://www.mcbbs.net/thread-460476-1-1.html"></a>
+							<p><span class="STYLE2">这是一篇将命令方块运用编程"面向过程"思想使用的教程，而将一串命令作为一个组来执行的这种方法定义为模块(Function或CommandGroup)。</span><br>
+							  <span class="STYLE11">由于是面向过程思想，因此教程自上而下对于命令的讲解都和编程息息相关。</span><br><br>
+							  <span class="STYLE10">全篇索引分为：</span><br>9个大章（主要讲解以计分板→变量，返回值、执行值→条件，反复执行→循环的一套体系）；<br>3个附加章节（包括常用效果指令、集成指令即OOC、优化模块的补充内容）。<br><br>
+						    <span class="STYLE9">大体上来说，本教程更适合于中高端命令方块玩家，并且建议在初步学习编程后再来阅读最宜。</span></p>
+				            <div align="center"><a href="http://www.mcbbs.net/thread-460476-1-1.html" target="_blank" class="blog-button">View</a> </div>
+					  </div>
+					</div>
+					<div class="project-home-holder col-md-6 col-sm-12"><!--右侧-->
+					  <div class="project-title animated fadeInUp"><!--R1-->
+							<h2>Loottable教程索引</h2>
+							<a href="http://www.mcbbs.net/thread-619468-1-1.html" target="_blank"><img src="img/Xmas_chest.png" longdesc="http://www.mcbbs.net/thread-619468-1-1.html"></a>
+							<p><span class="STYLE2">这是一个loottable的系统教程</span><br>
+					    <br>Loottable（可抢夺物品列表）是1.9+中的一个新特性，主要靠调用外置json文件实现对物品奖励获取的随机。<br>
+					    <span class="STYLE9">如果你掌握了loottable，那么很显然也掌握了玄学知识，充实自己的随机宝库吧。</span></p>
+						    <div align="center"><a href="http://www.mcbbs.net/thread-619468-1-1.html" target="_blank" class="blog-button">View</a> </div>
+			          </div>
+					  <div class="project-title animated fadeInUp"><!--R2-->
+							<h2>CBL作品索引</h2>
+							<a href="http://www.mcbbs.net/thread-302146-1-1.html" target="_blank"><img src="img/logo_bigger_text.png" width="150" height="150" longdesc="http://www.mcbbs.net/thread-302146-1-1.html"></a>
+							<p><span class="STYLE13"><strong>这是一个非只有本人参与的索引</strong></span><br>
+					    <br>
+				          <strong>综合大家的精品，是小组共同的精华</strong></p>
+						    <div align="center"><a href="http://www.mcbbs.net/thread-302146-1-1.html" target="_blank" class="blog-button">View</a> </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		</div>
+
+		<div id="menu-2" class="content about-section container">
+			<div class="our-story">
+				<div class="story-bg animated fadeIn"></div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="inner-story animated fadeInRight text-center">
+							<h2>我是谁</h2>
+							<p>没有谁。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="our-offers">
+				<div class="offer-bg animated fadeIn"></div>
+				<div class="offer-header">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<div class="offer-title animated fadeInDown">
+								<h2>致力于Minecraft</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="offer-holder">
+						<div class="col-md-6">
+							<div class="offer-item offer-1 animated fadeInLeft">
+								<figure>
+									<img src="img/a1.png" alt="">
+								</figure>
+								<div class="offer-content text-center">
+									<h4>成果</h4>
+									<p>推动了1.8命令方块在国内的发展。<br>推动了1.9命令方块在国内的发展。<br>推动了1.10命令方块在国内的发展。<br>研发黑科技。</p>
+									<span class="offer-left"><i></i></span>
+									<span class="offer-right"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="offer-item offer-2 animated fadeInRight">
+								<figure>
+									<img src="img/a2.png" alt="">
+								</figure>
+								<div class="offer-content text-center">
+									<h4>目标</h4>
+									<p>继续推动1.1X命令方块在国内的发展。<br>继续推动1.2X命令方块在国内的发展。<br>继续推动1.3X命令方块在国内的发展。<br>继续研发黑科技。</p>
+									<span class="offer-left"><i></i></span>
+									<span class="offer-right"><i></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu-3" class="content project-section container">
+			<div class="projects-header">
+				<h2 class="animated fadeInRight STYLE3">辅助工具</h2>
+				<p class="animated fadeInLeft STYLE3">这些是你也许需要的辅助工具</p>
+				<gg class="animated fadeInBottom STYLE3">详情点击辅助工具封面图片进入发布地址。</gg>
+			</div>
+			<div class="projects-holder">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 p-1 animated umScaleIn">
+						<div class="project-item">
+							<img src="img/1.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-572449-1-1.html">可抢夺随机物品列表编辑器</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 p-2 animated umScaleIn">
+						<div class="project-item">
+							<img src="img/2.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-533943-1-1.html">PCB外置指令编辑器</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 p-3 animated umScaleIn">
+						<div class="project-item">
+							<img src="img/3.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-419522-1-1.html">Json生成器(仅针对1.8)</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-sm-6 p-4 animated umScaleIn">
+						<div class="project-item animated umScaleIn">
+							<img src="img/4.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-458209-1-1.html">反编译OOC(停止更新)</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="project-item p-5 animated umScaleIn">
+							<img src="img/5.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-478493-1-1.html">实体运动计算器</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="project-item p-6 animated umScaleIn">
+							<img src="img/6.jpg" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-627746-1-1.html">读取模块到文件的滤器</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="project-item p-7 animated umScaleIn">
+							<img src="img/7.png" alt="">
+							<div class="overlay">
+								<h4><a href="http://www.mcbbs.net/thread-636351-1-1.html">将实体ID升级到1.11的滤器</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu-4" class="content blog-section container">
+			<div class="blog-header text-center">
+				<h2 class="animated fadeInRight STYLE3">CommandBlockLogic</h2>
+				<p class="animated fadeInLeft STYLE3">一个致力于命令方块的小组</p>
+				<a href=" " class="animated fadeInUp STYLE3">小组作品：</a>
+			</div>
+			<div class="row blog-posts">
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-1 animated zoomIn">
+						<div class="blog-bg blog-pink"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">地心之路</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">大型地牢随机探索冒险类地图。</span><br><br><span class="STYLE35">以科考为主题的PVE地图。全地图中所有房间、奖励道具均为随机生成，剧情走向为双线，且PVE难度较高。除了需要碰碰运气，你更应注重团队配合。现在跟着你的朋友组成队伍，探索未知的地下世界吧。<br><br>CBL在MCBBS第十届擂台赛参赛作品。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-605671-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-2 animated zoomIn">
+						<div class="blog-bg blog-blue"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">狂欢足球</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">一款大型小游戏地图。</span><br><br><span class="div-left STYLE35">以足球为主题的小游戏。在Minecraft中复原了1:1球场（原型为波尔图火龙球场）。除复原足球规则的玩法外，还添加了很多例如道具，职业，模式等趣味性的元素。进球的那一刻，便是足球的狂欢。<br><br>CBL耗时一年匠心打造。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-461937-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-3 animated zoomIn">
+						<div class="blog-bg blog-green"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">绵羊崛起</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">一款弹幕类游戏地图。</span><br><br><span class="div-left STYLE35">一款弹幕游戏，在Mc中成功首次还原了类似东方的弹幕游戏。游戏共分为8章，每一章过后都能通过点数强化或购买道具。迸射的弹幕，使游戏的打击感十足，让你能感受到扫清六合、席卷八荒、横扫千军之快感。<br><br>CBL代表作之一。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-552669-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-4 animated zoomIn">
+						<div class="blog-bg blog-yellow"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">当猪飞时</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">一款射击游戏地图。</span><br><br><span class="div-left STYLE35">模拟靶场的射击游戏。拥有特制的击杀率显示，2种有趣的比赛模式，道具赛各式各样的道具，可开关的血液效果等独特游戏内容。你的敌人是从天而降的猪，体验暴力艺术便是此地图最大的特色。<br><br>CBL力作之一。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-386042-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-5 animated zoomIn">
+						<div class="blog-bg blog-a"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">当猪爆时</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">一款躲避类游戏地图。</span><br><br><span class="div-left STYLE35">考验身法和走位的躲避游戏。拥有9张地图，多种游戏模式和游戏道具，一切设置都可以自定义选择。天降的猪猪成为空降炸弹，使游戏的节奏变得十分紧凑。坚持到最后，便能迎接最后的胜利。<br><br>CBL力作之一。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-390307-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="blog-item post-6 animated zoomIn">
+						<div class="blog-bg blog-b"></div>
+						<div class="blog-content">
+							<h3><a href="#"><span class="text-center STYLE36">超级掘一死战</span></a></h3>
+							<span class="solid-line"></span>
+							<p><span class="text-center STYLE2">经典小游戏地图。</span><br><br><span class="div-left STYLE35">掘一死战的升级版。通过命令方块重制了掘一死战，使游戏节奏变得更加紧张刺激。除了手中的铲与镐，你更有强大的超级道具助力。九种不同，多种自定义选项供你选择。破坏一切即是真理。<br><br>CBL代表作之一。<br><br></span></p>
+							<a href="http://www.mcbbs.net/thread-376060-1-1.html" target="_blank" class="post-button">前往发布地址</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <div id="menu-5" class="content contact-section container">
+  		<div class="contact-header text-center"><a href="https://tremblestarman.neocities.org/clock.html">时钟</a></div>
+		<!--<div class="contact-header text-center">
+				<h2 class="animated fadeInLeft">Get in Touch</h2>
+				<p class="animated fadeInRight">Feel free to talk to us about anything.</p>
+				<ul class="contact-social animated fadeInUp">
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i></a></li>
+				</ul>
+			</div>
+	<div class="contact-holder">
+	  <div class="row">
+					<div class="col-md-6 col-sm-12">
+			            <div class="googlemap-wrapper animated fadeInLeft">
+                            <div id="map_canvas" class="map-canvas"></div>
+                        </div>
+					</div>
+		<div class="col-md-6 col-sm-12">
+		  <div class="contact-form animated fadeInUp">
+							<h4>Send us a Message</h4>
+		    <div class="row">
+								<fieldset class="col-md-6">
+									<input type="text" name="name" placeholder="Your name">
+								</fieldset>
+								<fieldset class="col-md-6">
+									<input type="email" name="email" placeholder="Your name">
+								</fieldset>
+								<fieldset class="col-md-12">
+									<input type="text" name="subject" placeholder="Subject">
+								</fieldset>
+								<fieldset class="col-md-12">
+									<textarea name="message" id="message" cols="30" rows="10" placeholder="Describe your Project"></textarea>
+								</fieldset>
+<fieldset class="col-md-12">
+								<a href="#" class="message-button">Submit Message</a>
+			  </fieldset>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>-->
+  </div>
+</div>
+
+<style>
+    .tipground {
+        opacity:0.4;
+    }
+</style>
+
+<div class="animated fadeInRight"><div class="tipground"><span class="STYLE34" id="bgt" onClick="messageBackGround()">点击标题文字/刷新切换背景颜色</span></div></div>
+	<footer class="site-footer container text-center">
+	  <div class="row"></div>
+		<div class="row">
+		  <div class="col-md-12 copyright"></div>
+		</div>
+	</footer>
+	<!-- templatemo 421 raleway -->
+	<span class="border-top"></span>
+	<span class="border-left"></span>
+	<span class="border-right"></span>
+	<span class="border-bottom"></span>
+	<span class="shape-1"></span>
+	<span class="shape-2"></span>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/templatemo_custom.js"></script>
 </body>
+<script type="text/javascript">
+	function loadf()
+	{
+		var i = Math.floor(Math.random()*16777215);
+		document.body.style.background = "#"+i.toString(16);
+		r = Math.floor(i / 65536);
+		if(r >= 240){
+			r -=32;
+		}
+		g = Math.floor(Math.floor(i % 65536) / 256);
+		if(g >= 240){
+			g -=32;
+		}
+		b = Math.floor(Math.floor(i % 65536) % 256);
+		if(g >= 240){
+			b -=32;
+		}
+		i = (r+16)*65536+(g+16)*256+b+16;
+		
+		j = str_pad(i.toString(16));
+		$(".border-top").css("background-color","#"+j.toString(16));
+		$(".border-right").css("background-color","#"+j.toString(16));
+		$(".border-left").css("background-color","#"+j.toString(16));
+		$(".border-bottom").css("background-color","#"+j.toString(16));
+		$(".shape-1").css("background-color","#"+j.toString(16));
+		$(".shape-2").css("background-color","#"+j.toString(16));
+		$(".overlay").css("background-color","rgba("+(r+16).toString()+","+(g+16).toString()+","+(b+16).toString()+",0.9)");
+		$(".overlay h4 a ").css("color",fcolor(r,g,b));
+		$(".STYLE4").css("color","#"+j.toString(16));
+	}
+	window.onload=loadf();
+	
+	function fcolor(r,g,b)
+	{
+		if(r==0&&g==0&&b==0)
+			return "#000";
+		else
+			return "#FFF";
+	}
+</script>
 </html>
