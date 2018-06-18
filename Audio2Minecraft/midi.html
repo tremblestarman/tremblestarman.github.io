@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio2Minecraft</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body onload="javascript:load0()">
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                       Audio2Minecraft
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 简介</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-windows"></i> A2M-UI <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的图形化处理程序</li>
+                    <li><a href="import.html">导入</a></li>
+                    <li><a href="midi.html">Midi设置</a></li>
+					<li><a href="wav.html">Wave设置</a></li>
+                    <li><a href="public.html">全局设置</a></li>
+                    <li><a href="lrc.html">歌词设置</a></li>
+					<li><a href="exps.html">导出设置</a></li>
+					<li><a href="export.html">导出</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gears"></i> A2M-Dll <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的类库</li>
+					<li><a href="demo1.html">基本流</a></li>
+                    <li><a href="demo2.html">计分板接口</a></li>
+					<li><a href="demo3.html">聊天栏音频可视化</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+                </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+						<h1 class="page-header" style="text-align:center;">Midi设置</h1>
+						<p>导入Midi文件后，你可以在Midi设置中设置Midi的各种属性。</p>
+						<p><img alt="" src="assets/midi/midi-0.png"/></p>
+						<p>左侧列表为音轨(Tracks)列表，右侧则是属性设置栏。</p>
+						<h2>列表</h2>
+						<hr/><h3>列表切换</h3>
+						<p><img alt="" src="assets/midi/midi-1.png"/></p>
+						<p>点击“音轨序列”图标变为“圆号”图标，音轨列表将会切换为乐器(Instruments)列表。再次点击该按钮切换回音轨列表。</p>
+						<p><code>音轨列表和乐器列表是两个相互关联的列表，一条音轨中可以包含多个乐器，一个乐器也可以对应多个音轨。但你不用担心在设置音轨属性后切换为乐器列表，原本设定的属性会消失，因为A2M是将各个音轨的各个乐器视为独立对象处理的。</code></p>
+						<hr/><h3>启用与禁用</h3>
+						<p><img alt="" src="assets/midi/midi-2.png"/></p>
+						<p>音轨列表中点击方框或名称将禁用该音轨(包括此音轨下的所有乐器)。乐器列表中则是禁用该乐器(会同步更新所有音轨下的该乐器)。再次点击以启用。</p>
+						<p><code>图中我们禁用&quot;Percussion&quot;音轨，启用乐器&quot;Electric Snare&quot;，在实际导出时，乐器&quot;Electric Snare&quot;仍然是被禁用的。因为此乐器属于&quot;Percussion&quot;音轨，在该音轨禁用后，无论音轨中的乐器处于何种状态，都将被禁用。对于禁用来说，音轨的优先级大于音轨中的乐器。</code></p>
+						<hr/><h3>折叠与选中</h3>
+						<p><img alt="" src="assets/midi/midi-3.png"/></p>
+						<p>点击左方小三角展开或折叠。点击方框或名称外的部分选中。元素未被禁用时，属性才允许被修改。</p>
+						<hr/><h2>属性</h2>
+						<p>选中一个被启用的元素后，你才能修改它的属性。</p>
+						<p>修改的属性将会影响该元素所代表的音轨或乐器下的所有键。</p>
+						<hr/><h3>计分板输出</h3>
+						<p><img alt="" src="assets/midi/midi-4.png"/></p>
+						<p>点击启用计分板输出。</p>
+						<p><img alt="" src="assets/midi/midi-5.png"/></p>
+						<p>计分板可输出以下属性：</p>
+						<ul><li>键起始时间
+						<code>键的起始绝对时间</code></li><li>键起始刻数
+						<code>键的起始刻数</code></li><li>键持续时间
+						<code>键的持续绝对时间</code></li><li>键持续刻数
+						<code>键的持续刻数</code></li><li>小节索引
+						<code>键所属于的小节的索引</code></li><li>小节长度
+						<code>键所属于的小节的长度</code></li><li>频道
+						<code>音轨的频道</code></li><li>音高
+						<code>键的音高</code></li><li>力度
+						<code>键的力度</code></li></ul>
+						<p><code>键：代表MidiOut的MidiEvent</code></p>
+						<hr/><h3>Playsound输出</h3>
+						<p><img alt="" src="assets/midi/midi-6.png"/></p>
+						<p>点击启用Playsound输出。</p>
+						<p><img alt="" src="assets/midi/midi-7.png"/></p>
+						<p>Playsound输出中可设定以下值：</p>
+						<ul><li><h4>音色名称 &amp; 子表达式</h4></li><p>两者共同表达的便是Playsound命令中的音效名。</p>
+						<p>例如</p>
+						<p><code>音色名:&quot;12c&quot; + 子表达式:&quot;%p&quot; =&gt; 12c.60</code></p>
+						<ul><li><h5>音色名</h5></li>
+						<p>资源包中音效的顶级文件夹名，以soma资源包为例，顶级文件夹名就是音色的Id。</p>
+						<p>例如</p>
+						<p><code>Vibraphone - 12/12c, Tango Accordion - 19c, Distortion Guitar - 31/31c</code></p>
+						<li><h5>子表达式</h5></li>
+						<p>一段表达式，表达式中的某些字符可代表键的属性：</p>
+						<ul><li>%t <code>继承持续时间</code></li><li>%t[min..max] <code>继承持续时间，范围限定</code></li><li>%p <code>继承音高</code></li><li>%p[min..max] <code>继承音高，范围限定</code></li><li>%pt[CustomPitch.json] <code>继承自定义持续时间</code></li><li>%pc[CustomTickName.json] <code>继承自定义音高</code></li></ul>
+						<p>例如</p>
+						<p><code>piano.p%pfff</code></p>
+						<p>上面的表达式用于RealPiano。如果某键的音高为72，实际得到的字符便是：</p>
+						<p><code>piano.p72fff</code></p>
+						<p>自定义持续时间和自定义音高是作为匹配列表的json文件，放在CompareList文件夹中，每次启动A2M时可被导入。它的格式很简单，例如octaves.json：</p>
+						<p><code>
+						{
+							&quot;0&quot;: &quot;c0&quot;,
+							&quot;1&quot;: &quot;cs0&quot;,
+							&quot;2&quot;: &quot;d0&quot;,
+							&quot;3&quot;: &quot;ds0&quot;,
+							&quot;4&quot;: &quot;e0&quot;,
+							&quot;5&quot;: &quot;f0&quot;,
+							&quot;6&quot;: &quot;fs0&quot;,
+							&quot;7&quot;: &quot;g0&quot;,
+							&quot;8&quot;: &quot;gs0&quot;,
+							&quot;9&quot;: &quot;a0&quot;,
+							&quot;10&quot;: &quot;as0&quot;,
+							&quot;11&quot;: &quot;b0&quot;,
+							...
+						}
+						</code></p>
+						<li><h5>音色名 &amp; 子表达式的快速选择</h5></li>
+						<p><img alt="" src="assets/midi/midi-8.png"/></p>
+						<p>A2M内置了用于快速选择音色名和子表达式的配置文件(用于soma资源包)，储存在InstrumentList文件夹中。</p>
+						<p>参照soma.json的格式，你可以制作配合你的资源包的配置文件。把它放在InstrumentList文件夹中，每次启动A2M时可被导入。</p>
+						<li><h5>一些资源包的填写方法</h5></li>
+						<p>对于RealPiano</p>
+						<p><code>音色名:&quot;lkrb&quot;, 子表达式:&quot;piano.p%pfff&quot;</code></p>
+						<p>对于SteinwaySoft</p>
+						<p><code>音色名:&quot;xwj&quot;, 子表达式:&quot;pno.%pf&quot;或&quot;pno.%p.st&quot;</code></p></ul></ul>
+						<ul><li><h4>相对玩家 &amp; 相对播放坐标</h4></li></ul>
+						<p><img alt="" src="assets/midi/midi-9.png"/></p>
+						<p>即execute命令中的<code>对象</code>和<code>相对坐标</code>。</p>
+						<p>如果启用了双声道，相对坐标将会被覆盖。</p>
+						<ul><li><h4>播放对象 &amp; 源</h4></li></ul>
+						<p><img alt="" src="assets/midi/midi-10.png"/></p>
+						<p>即playsound命令中的<code>播放对象</code>和<code>源</code>。</p>
+						<ul><li><h4>Stopsound &amp; 额外延时<h4></li></ul>
+						<p><img alt="" src="assets/midi/midi-11.png"/></p>
+						<p>限定播放时间，用于长音。</p>
+						<p><code>播放时间 = 键持续刻数 + 额外延时</code></p>
+						<ul><li><h4>音量</h4></li></ul>
+						<p><img alt="" src="assets/midi/midi-12.png"/></p>
+						<p>调整播放音量。</p>
+						<p><code>播放音量 = 音轨音量 * 力度 * λ</code></p>
+						<hr/><h3>保存设置</h3>
+						<p><img alt="" src="assets/midi/midi-13.png"/></p>
+						<p>每次修改属性后，别忘了保存。</p>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+		
+		 function load0() {
+ 			document.getElementById("view0").innerHTML = '<object type="text/html" data="READMEs.html" width="100%" height="100%"></object>';
+   		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio2Minecraft</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body onload="javascript:load0()">
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                       Audio2Minecraft
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 简介</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-windows"></i> A2M-UI <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的图形化处理程序</li>
+                    <li><a href="import.html">导入</a></li>
+                    <li><a href="midi.html">Midi设置</a></li>
+					<li><a href="wav.html">Wave设置</a></li>
+                    <li><a href="public.html">全局设置</a></li>
+                    <li><a href="lrc.html">歌词设置</a></li>
+					<li><a href="exps.html">导出设置</a></li>
+					<li><a href="export.html">导出</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gears"></i> A2M-Dll <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的类库</li>
+					<li><a href="demo1.html">基本流</a></li>
+                    <li><a href="demo2.html">计分板接口</a></li>
+					<li><a href="demo3.html">聊天栏音频可视化</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+                </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+						<h1 class="page-header" style="text-align:center;">歌词设置</h1>
+						<h3>歌词预览</h3>
+						<p><img alt="" src="assets/lrc/lrc-0.png"/></p>
+						<p>导入歌词后，下方列表将显示歌词的预览，包括歌词的起始刻数和歌词内容。</p>
+						<p>目前支持的歌词文件有.lrc和.amlrc（A2M专用的歌词文件）</p>
+						<hr/><h3>输出设置</h3>
+						<p><img alt="" src="assets/lrc/lrc-1.png"/></p>
+						<p>目前支持Tellraw（聊天栏）、SubTitle（子标题）、ActionBar（物品栏上方）、Title（标题）。</p>
+						<p>修改后别忘了点击右边的对勾保存设置。</p>
+						<hr/><h3>A2M歌词文件</h3>
+						<p>这是一个示例文件：<a href="https://github.com/tremblestarman/MineAudio/blob/master/Test/bin/Debug/%E5%B0%91%E5%A5%B3%E7%BB%88%E6%9C%AB%E6%97%85%E8%A1%8C.amlrc">少女终末旅行.amlrc</a></p>
+						<p>不同于lrc歌词文件，A2M歌词文件(amlrc)更加高级，支持逐段甚至逐字地设置样式。A2M歌词基于Title，通过特定的语法，你可以让歌词出现在不同的位置，显示不同的颜色。不过比起lrc，amlrc的制作相对麻烦。</p>
+						<h4>语法</h4>
+						<ul><li><p><h5>单元素</h5></p><p>标准格式：<code>&quot;内容&quot;-&quot;起始刻数&quot;;</code></p><p>例如：<code>今日-150;</code> <code>§7は-175;</code></p><p>前者表示在第150刻出现&quot;今日&quot;，后者表示在第175刻出现灰色的&quot;は&quot;（详见<a href="http://minecraft-zh.gamepedia.com/%E6%A0%B7%E5%BC%8F%E4%BB%A3%E7%A0%81">样式代码</a>）</p></li><li><p><h5>组合元素</h5></p><p>标准格式：</p><p>
+						<pre>单元素×m //title
+(单元素×n //subtitle)
+</pre></p><p>例如：</p><p>
+						<pre>孤-693;§8独-698;
+§8さ-679;§7よ-682;§7な-684;§7ら-686;§7さ-689;</pre>
+						<p>表示下方五个元素作为subtitle分别在第679、682、684、686、689刻出现，上方两个元素作为title分别在第693、698刻出现。
+						这七个元素作为一个组合元素，虽然不是同时出现的，但会在下一个组合元素出现时同时消失。</p></li><li><p><h5>多组合元素</h5></p><p>组合元素之间空一行，表示分隔。</p><p>例如：
+						<pre>難-750;
+						
+§7難-757;
+						
+§8難-764;§9解-773;§7な-782;</pre></li></ul>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+		
+		 function load0() {
+ 			document.getElementById("view0").innerHTML = '<object type="text/html" data="READMEs.html" width="100%" height="100%"></object>';
+   		}
+	</script>
+</body>
+</html>

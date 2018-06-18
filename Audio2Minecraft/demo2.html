@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio2Minecraft</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body onload="javascript:load0()">
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                       Audio2Minecraft
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 简介</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-windows"></i> A2M-UI <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的图形化处理程序</li>
+                    <li><a href="import.html">导入</a></li>
+                    <li><a href="midi.html">Midi设置</a></li>
+					<li><a href="wav.html">Wave设置</a></li>
+                    <li><a href="public.html">全局设置</a></li>
+                    <li><a href="lrc.html">歌词设置</a></li>
+					<li><a href="exps.html">导出设置</a></li>
+					<li><a href="export.html">导出</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gears"></i> A2M-Dll <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的类库</li>
+					<li><a href="demo1.html">基本流</a></li>
+                    <li><a href="demo2.html">计分板接口</a></li>
+					<li><a href="demo3.html">聊天栏音频可视化</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+                </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+						<h1 class="page-header" style="text-align:center;">计分板接口</h1>
+						<div class="lead" style="text-align:center;">结合Minecraft元素表现音频可视化</div>
+						<blockquote class="lead" style="font-size:15px;">源码来自工程『<a href="https://github.com/tremblestarman/MineAudio/blob/master/Test/%E5%B0%91%E5%A5%B3%E7%BB%88%E6%9C%AB%E6%97%85%E8%A1%8C.txt">少女终末旅行</a>』</blockquote>
+						<pre>InheritExpression.SetCompareLists(System.Windows.Forms.Application.StartupPath + "\\test");
+//生成TimeLine(时间序列)
+var a = new TimeLine().Serialize(MidiPath.Text, WavePath.Text, 0, 10, 10, 4);
+a.Sound_InheritExpression("%p");//设置子表达式
+//设定音轨及其音色
+a.Sound_StopSound(true);//启用/stopsound
+a.Sound_ExtraDelay(3);//所有音轨的发生发声延长3tick 
+a.Sound_SoundName("9", "9");//用法：timeLine.Sound_SoundName("音色名称","音轨名称","乐器名称")
+a.Sound_SoundName("33c", "33"); a.Sound_ExtraDelay(4, "33");//用法：timeLine.Sound_SoundName(延长时间[刻],"音轨名称","乐器名称")
+a.Sound_SoundName("39", "39");
+a.Sound_SoundName("51c", "51");
+a.Sound_SoundName("7", "7"); a.Sound_StopSound(false, "7");
+a.Sound_SoundName("1", "1"); a.Sound_PercVolume(110, "1"); a.Sound_StopSound(false, "1");//对"1"(钢琴)禁用/stopsound
+a.Sound_SoundName("5c", "5"); a.Sound_ExtraDelay(4, "5");
+a.Sound_SoundName("8", "8");
+a.Sound_SoundName("26c", "26");
+a.Sound_SoundName("0.44", "Pedal Hi-Hat");
+a.Sound_SoundName("0.36", "Bass Drum1");
+a.Sound_SoundName("0.47", "Low-Mid Tom");
+a.Sound_SoundName("0.59", "Ride Cymbal2");
+a.Sound_SoundName("0.58", "Vibra-slap"); a.Sound_ExtraDelay(10, "Vibra-slap");
+//禁用&启用特定的音轨
+a.EnableMidi(false);//Midi序列全部禁用
+a.EnableWave(false, -1, "Right");//Wave序列的右声道全部禁用
+a.EnableMidi(true, "", "", -1, "PlaySound");//启用Midi序列的/playsound
+a.EnableMidi(false, "D", "", -1, "PlaySound");//禁用下列音轨的/playsound
+a.EnableMidi(false, "X", "", -1, "PlaySound");
+a.EnableMidi(false, "R", "", -1, "PlaySound");
+a.EnableMidi(false, "F", "", -1, "PlaySound");
+a.EnableMidi(true, "D", "", -1, "Pitch");
+a.EnableMidi(true, "X", "", -1, "Pitch");
+a.EnableMidi(true, "R", "", -1, "Pitch");
+a.EnableMidi(true, "F", "", -1, "Pitch");//这些音轨用于输出它们音高值到计分板
+a.EnableMidi(true, "Low-Mid Tom", "", -1, "Velocity");
+a.EnableMidi(true, "Pedal Hi-Hat", "", -1, "Velocity");
+a.EnableMidi(true, "Ride Cymbal2", "", -1, "Velocity");
+a.EnableMidi(true, "Vibra-slap", "", -1, "Velocity");//这些音轨除了用于/playsound还将输出它们速率(力度)到计分板
+
+//生成CommnandLine(命令序列)
+var b = new CommandLine().Serialize(a);
+
+//读取AMLrc(命令序列)嵌入命令序列
+var lrc = new AMLrc().Serialize(LrcPath.Text).AMLrcLine;
+b = b.Combine(b, lrc);
+
+//生成schematic文件
+new Schematic().ExportSchematic(b, new ExportSetting() { AlwaysActive = true, AlwaysLoadEntities = false, Direction = 0, Width = 5 }, "E:\\time.schematic");</pre>
+						<h3>禁用播放 & 开启计分板输出</h3>
+						<pre>a.EnableMidi(false, "D", "", -1, "PlaySound");
+a.EnableMidi(true, "D", "", -1, "Pitch");</pre>
+						<p>音轨"D"是我们为了输出计分板专门独立出的一条的音轨，上面两行即禁用其播放同时输出音高。</p>
+						<h3>计分板接口获取</h3>
+						<p>接下来我们可以进入Minecraft内查看留下来的接口。（从初始化命令中查看，即命令流最开头处）</p>
+						<p><img src="assets/demo2/1.png" alt="6"></p>
+						<p>计分板接口遵循以下命名规则：</p>
+						<ul>
+							<li><h4>计分板</h4></li>
+								<ul>
+								<li><h5>键</h5></li>
+									<p>键的计分板有以下几个：</p>
+									<ul>
+										<li>MidiFileFormat</li>
+										<li>MidiTracksCount</li>
+										<li>MidiDeltaTdiv4</li>
+										<li>MidiBPM</li>
+										<li>AudioFileFormat</li>
+										<li>TotalTicks</li>
+									</ul>
+								<li><h5>Wave</h5></li>
+									<p>波形的计分板有以下几个：</p>
+									<ul>
+										<li>Fre</li>
+										<li>Vol</li>
+									</ul>
+								</ul>
+							<li><h4>实体对象</h4></li>
+							<p>实体对象共有的标签为"AudioRiptideNode"。若按命名规则标签中出现了非大小写字母或下划线，该字符被替换为下划线。</p>
+								<ul>
+								<li><h5>键信息</h5></li>
+								<p>储存键信息的实体有三个标签，分别为特有标签、音轨、乐器</p>
+									<ul>
+										<li>特有标签</li>
+										<code>track(5)_instrument(5)_index</code>
+										<p>取音轨的前五个字符、乐器的前五个字符与键的索引（按照出现顺序）</p>
+										<p>例如表示音轨"Track"，乐器"Instrument"，同时出现的第3个键：</p>
+										<code>Track_Instr_3</code>
+										<li>音轨</li>
+										<code>t_track</code>
+										<p>音轨名前加上"t_"即可。（空格被替换为下划线）</p>
+										<li>乐器</li>
+										<code>i_instrument</code>
+										<p>乐器名前加上"i_"即可。（空格被替换为下划线）</p>
+									</ul>
+								</ul>
+								<li><h5>波形</h5></li>
+								<p>储存波形信息的实体命名规则很简单：</p>
+								<code>wave_index_r/l</code>
+								<p>索引与采样数有关，后面的r或l代表右声道或左声道。</p>
+						</ul>
+						<h3>结合Function</h3>
+						<pre>fill -20 6 17 -20 13 17 air 0 replace minecraft:stained_glass
+execute @e[tag=wave0_l_0,score_Fre_min=18] ~ ~ ~ setblock -20 6 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=36] ~ ~ ~ setblock -20 7 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=54] ~ ~ ~ setblock -20 8 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=72] ~ ~ ~ setblock -20 9 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=90] ~ ~ ~ setblock -20 10 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=108] ~ ~ ~ setblock -20 11 17 minecraft:stained_glass 14
+execute @e[tag=wave0_l_0,score_Fre_min=126] ~ ~ ~ setblock -20 12 17 minecraft:stained_glass 14</pre>
+						<p>这是波形可视化中对频率的一段Function，基本方法就是遍历。通过对计分板接口的值遍历，达到可视化的效果。如果利用方块作为可视化对象，别忘了重置以更新。</p>
+						<h3>效果</h3>
+						<p>以下便是工程的最终效果：</p>
+						<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf?" flashvars="aid=17558155&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+                    </div>
+                </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+		
+		 function load0() {
+ 			document.getElementById("view0").innerHTML = '<object type="text/html" data="READMEs.html" width="100%" height="100%"></object>';
+   		}
+	</script>
+</body>
+</html>
