@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Block2Json</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+    <style>
+	li {
+		list-style-type:none;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                       Block2Json
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 主页</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-book"></i> 使用指南 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">使用指南</li>
+                    <li><a href="commandline.html">命令行</a></li>
+                    <li><a href="resource.html">资源文件</a></li>
+					<li><a href="detailed.html">详解</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-paper-plane-o"></i> 实例 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">实例</li>
+					<li><a href="quick_model.html">快速雕塑</a></li>
+                    <li><a href="quick_weapon.html">速建武器&工具</a></li>
+					<li><a href="vox2json.html">Vox转Json模型</a></li>
+                    <li><a href="obj2json.html">Obj转Json模型</a></li>
+                    <li><a href="mmd2json.html">MMD转Json模型</a></li>
+					<li><a href="2cubik.html">导入Cubik操作</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/Block2Json"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header" style="text-align:center;">Block2Json 资源文件</h1>  
+                        <blockquote class="lead">—— 资源文件格式介绍</blockquote>
+						<a name="blockinfo"></a><hr/>
+                        <h3>BlockInfo 方块信息</h3>
+                        <p><strong>BlockInfo</strong> 记录了一个类别的方块不同版本的所有材质、模型信息，使用Json格式，可被动态读取。</p>
+                        <div class="tree" style="background-color: #444">  
+                        <div class="tree well" style="background-color: #444">
+                        <ul>
+                            <li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> A Block Class : 储存了全部方块信息.</span></span> <a href=""></a>
+                                <ul>
+                                    <li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> A BlockInfo List : 方块信息的不同变种.</span></span> <a href=""></a>
+                                        <ul>
+                                            <li><span><span class="btn" style="color: #EEE"><span class="json-co"></span> A BlockInfo : 储存一个方块的所有信息.</span></span> <a href=""></a>
+                                            <ul>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-do"></span> VersionFrom : 所适用的起始版本.(值为0表示无需规定起始版本)</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-do"></span> VersionTo : 所适用的截止版本.(值为0表示无需规定截止版本)</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Id : 方块的Id.(若为原版方块请加上minecraft:前缀)</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Data : 方块的Data.(值为空或'x'表示任意Data,多个Data用','隔开)</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-co"></span> Size : 模型的大小.(将传参给ModelInfo)</span></span> <a href=""></a>
+                                                <ul>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-do"></span> X : X轴延伸长度.</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-do"></span> Y : Y轴延伸长度.</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-do"></span> Z : Z轴延伸长度.</span></span> <a href=""></a>
+                                                </li>
+                                                </ul>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-co"></span> Model : 定义了这个方块的模型.</span></span> <a href=""></a>
+                                                <ul>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Name : 所引用的ModelInfo.(后缀.json是必要的)</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Params : ModelInfo的条件参数.</span></span> <a href=""></a>
+                                                </li>
+                                                <li><span><span class="btn" style="color: #EEE"><span class="json-co"></span> Textures : 模型引用全部的材质.</span></span> <a href=""></a>
+                                                	<ul>
+                                                    <li><span><span class="btn" style="color: #EEE"><span class="json-co"></span> A Texture : 材质名.</span></span> <a href=""></a>
+                                                    	<ul>
+                                                        <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Path : 材质路径.(相对于texture根目录)</span></span> <a href=""></a>
+                                                        </li>
+                                                        <li><span><span class="btn" style="color: #EEE"><span class="json-st"></span> Params : 材质参数.</span></span> <a href=""></a>
+                                                        </li>
+                                                        </ul>
+                                                    </li>
+                                                    </ul>
+                                                </li>
+                                                </ul>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            	</ul>
+                        	</li>
+                        </ul>
+                        </div>
+                        </div>
+						
+                        <a name="blocktag"></a><hr/>
+						<h3>BlockTag 方块标签</h3>
+                        <p><strong>BlockTag</strong> 为一组定义的方块添加标签。</p>
+						                        <div class="tree" style="background-color: #444">  
+                        <div class="tree well" style="background-color: #444">
+                        <ul>
+                            <li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> Plus : 该标签中增添的所有方块，支持继承其他的标签.</span></span> <a href=""></a>
+                        	</li>
+							<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> Minus : 该标签中舍去的所有方块，支持继承其他的标签.</span></span> <a href=""></a>
+                        	</li>
+                        </ul>
+                        </div>
+                        </div>
+						
+						<a name="modelinfo"></a><hr/>
+						<h3>ModelInfo 模型信息</h3>
+                        <p><strong>ModelInfo</strong> 记录了方块对应可调用的模型中的所有元素信息，可被动态读取。</p>
+						                        <div class="tree" style="background-color: #444">  
+                        <div class="tree well" style="background-color: #444">
+                        <ul>
+                            <li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> Root : 根标签.</span></span> <a href=""></a>
+								<ul>
+									<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> Enums : 储存了全部的枚举模型.</span></span> <a href=""></a>
+										<ul>
+											<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> An Enum : 一个枚举模型.</span></span> <a href=""></a>
+												<ul>
+													<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> Conditions : 该枚举的所有条件.</span></span> <a href=""></a>
+														<ul>
+															<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> A Condition : 一个条件.</span></span> <a href=""></a>
+																<ul>
+																	<li><span><span class="btn" style="color: #EEE"><i class="json-st"></i> Params : 条件参数.</span></span> <a href=""></a>
+																	</li>
+																	<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> RelativeBlocks : 在相对位置的符合条件所有方块.</span></span> <a href=""></a>
+																		<ul>
+																			<li><span><span class="btn" style="color: #EEE" title="表达式同filter_blocks"><i class="json-co"></i> A RelativeBlock : 在相对位置的符合条件方块.</span></span> <a href=""></a>
+																				<ul>
+																					<li><span><span class="btn" style="color: #EEE"><i class="json-in"></i>  X : X轴相对坐标.</span></span> <a href=""></a>
+																					</li>
+																					<li><span><span class="btn" style="color: #EEE"><i class="json-in"></i>  Y : Y轴相对坐标.</span></span> <a href=""></a>
+																					</li>
+																					<li><span><span class="btn" style="color: #EEE"><i class="json-in"></i>  Z : Z轴相对坐标.</span></span> <a href=""></a>
+																					</li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+												<ul>
+													<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> Elements : 该模型全部的元素.</span></span> <a href=""></a>
+														<ul>
+															<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> An Element : 一个元素.</span></span> <a href=""></a>
+																<ul>
+																	<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> from : 元素的起始点.</span></span> <a href=""></a>
+																		<ul>
+																			<li><span><span class="btn" style="color: #EEE" title="'$sx'、'$sy'、'$sz'继承BlockInfo中的Size><i class="json-st"></i> Expression : 坐标表达式.(三个表达式依次代表x,y,z)</span></span> <a href=""></a>
+																		</ul>
+																	</li>
+																	<li><span><span class="btn" style="color: #EEE"><i class="json-li"></i> to : 元素的终止点.</span></span> <a href=""></a>
+																		<ul>
+																			<li><span><span class="btn" style="color: #EEE" title="'$sx'、'$sy'、'$sz'继承BlockInfo中的Size"><i class="json-st"></i> Expression : 坐标表达式.(三个表达式依次代表x,y,z)</span></span> <a href=""></a>
+																		</ul>
+																	</li>
+																	<li><span><span class="btn" style="color: #EEE"><i class="json-st"></i> Texture : 材质名 (匹配BlockInfo的Model中的A Texture)</span></span> <a href=""></a>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+                        	</li>
+                        </ul>
+                        </div>
+                        </div>
+						
+						<a name="biomelist"></a><hr/>
+						<h3>BiomeList 生物群系列表</h3>
+                        <p><strong>BiomeList</strong> 定义了所有生物群系，主要定义温度、降水这两个值。</p>
+						                        <div class="tree" style="background-color: #444">  
+                        <div class="tree well" style="background-color: #444">
+                        <ul>
+							<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> Root : 根标签.</span></span> <a href=""></a>
+								<ul>
+									<li><span><span class="btn" style="color: #EEE"><i class="json-co"></i> A Biome : 一个生物群系的名称.</span></span> <a href=""></a>
+										<ul>
+											<li><span><span class="btn" style="color: #EEE"><i class="json-do"></i> Temperature : 生物群系温度值.</span></span> <a href=""></a>
+											</li>
+											<li><span><span class="btn" style="color: #EEE"><i class="json-do"></i> Rainfall : 生物群系降水值.</span></span> <a href=""></a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+                        	</li>
+                        </ul>
+                        </div>
+                        </div>
+						
+                        <p style="text-align:right"><a href="commandline.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-left"></i></button></a> <a href="detailed.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-right"></i></button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+		
+		$(function(){  
+			$('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', '单击折叠');  
+			$('.tree li.parent_li > span').on('click', function (e) {  
+				var children = $(this).parent('li.parent_li').find(' > ul > li');  
+				if (children.is(":visible")) {  
+					children.hide('fast');  
+					$(this).attr('title', '单击展开').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');  
+				} else {  
+					children.show('fast');  
+					$(this).attr('title', '单击折叠').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');  
+				}  
+				e.stopPropagation();  
+			});  
+		});  
+	</script>
+</body>
+</html>

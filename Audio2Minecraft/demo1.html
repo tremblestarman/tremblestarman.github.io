@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio2Minecraft</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                       Audio2Minecraft
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 简介</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-windows"></i> A2M-UI <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的图形化处理程序</li>
+                    <li><a href="import.html">导入</a></li>
+                    <li><a href="midi.html">Midi设置</a></li>
+					<li><a href="wav.html">Wave设置</a></li>
+                    <li><a href="public.html">全局设置</a></li>
+                    <li><a href="lrc.html">歌词设置</a></li>
+					<li><a href="exps.html">导出设置</a></li>
+					<li><a href="export.html">导出</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gears"></i> A2M-Dll <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">A2M的类库</li>
+					<li><a href="demo1.html">基本流</a></li>
+                    <li><a href="demo2.html">计分板接口</a></li>
+					<li><a href="demo3.html">聊天栏音频可视化</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+                </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+						<h1 class="page-header" style="text-align:center;">基本流</h1>
+						<div class="lead" style="text-align:center;">介绍代码生成一段红石音乐基本的流程</div>
+						<h3>设定对照表文件夹路径 *</h3>
+						<pre>InheritExpression.SetCompareLists(path);</pre>
+						<p>这一步是必须的，即使没有对照表也需要设置一个路径，否则将报错。路径为文件夹的绝对路径。</p>
+						<hr/>
+						<h3>实例化时间序列</h3>
+						<pre>var timeLine = new TimeLine().Serialize(midiPath, wavPath, BPM, fre_count, vol_count, cycle)</pre>
+						<p>几个属性（Midi路径、Wav路径、BPM、频率采样数、振幅采样数、采样周期）均为选填值。文件路径是绝对路径。</p>
+						<h3>设置</h3>
+						<ul>
+							<li><h4>Midi设置</h4></li>
+							<ul>
+								<li><h5>Midi全局 & 键参数</h5></li>
+								<p>Midi全局参数和键参数可被启用或禁用（默认禁用），以同步输出至计分板。</p>
+								<ul>
+									<li>全局参数</li>
+									<pre>timeLine.Enable(bool enable = true, string param = "")</pre>
+									<p>全局参数有以下几个：（留空表示全体）</p>
+									<ul>
+										<li>MidiFileFormat</li>
+										<li>MidiTracksCount</li>
+										<li>MidiDeltaTicksPerQuarterNote</li>
+										<li>MidiBeatPerMinute</li>
+										<li>AudioFileFormat</li>
+										<li>TotalTicks</li>
+									</ul>
+									<li>键参数</li>
+									<pre>timeLine.EnableMidi(bool enable = true, string track = "", string instrument = "", int index = -1, string param = "")</pre>
+									<p>track表示音轨，instrument指明乐器，index为特定索引的键。</p>
+									<p>键参数有以下几个：（留空表示全体）</p>
+									<ul>
+										<li>DeltaTickStart</li>
+										<li>MinecraftTickStart</li>
+										<li>DeltaTickDuration</li>
+										<li>MinecraftTickDuration</li>
+										<li>BarIndex</li>
+										<li>BeatDuration</li>
+										<li>Channel</li>
+										<li>Pitch</li>
+										<li>Velocity</li>
+										<li>Playsound</li>
+									</ul>
+								</ul>
+								<li><h5>Playsound参数</h5></li>
+								<p>Playsound命令中也有许多参数需要设定，包括最重要的音色名和子表达式</p>
+								<pre>timeLine.Sound_属性(? param, string track = "", string instrument = "", int index = -1)</pre>
+								<p>类似键参数，也可以指明音轨、乐器、特定键，留空表示全体。</p>
+								<p>Playsound属性有以下几个：</p>
+								<ul>
+									<li>SoundName</li>
+									<li>ExecuteCood</li>
+									<li>ExecuteTarget</li>
+									<li>PlayTarget</li>
+									<li>PlaySource</li>
+									<li>InheritExpression</li>
+									<li>ExtraDelay</li>
+									<li>MandaVolume</li>
+									<li>PercVolume</li>
+									<li>Enable</li>
+									<li>StopSound</li>
+								</ul>
+							</ul>
+							<li><h4>Wave设置</h4></li>
+							<p>Wave设置除了需要参数，还需指定声道。</p>
+							<pre>EnableWave(bool enable = true, int index = -1, string channel = "", string param = "")</pre>
+							<p>其中索引表示的是一个采样的索引，频道可为<code>Left</code>或<code>Right</code>，参数有以下几个：</p>
+							<ul>
+								<li>FrequencyPerTick</li>
+								<li>VolumePerTick</li>
+							</ul>
+							<p>（索引、声道或参数留空表示全体。）</p>
+						</ul>
+						<h3>实例化命令序列</h3>
+						<pre>var commandLine = new CommandLine().Serialize(timeLine);</pre>
+						<p>一个命令序列中有"Start"、"KeyFrame"、"End"三个列表，分别代表初始化命令、命令流、结束命令。</p>
+						<p>一个命令序列也允许嵌入的其他命令序列。</p>
+						<pre>commandLine1 = commandLine1.Combine(commandLine1, commandLine2)</pre>
+						<p>表示将commandLine2中的所有命令嵌入到commandLine1中（从commandLine1头部开始）。</p>
+						<h3>生成Schematic</h3>
+						<p>首先需要实例化导出设置。</p>
+						<pre>var exps = new ExportSetting() { AlwaysActive = true, AlwaysLoadEntities = false, AutoTeleport = true, Direction = 0, Width = 5, Type = ExportType.Universal }</pre>
+						<p>表示保持加载命令流，不保持加载实体，自动传送，向X+延伸，序列宽度为5，通用Schematic格式。</p>
+						<pre>new Schematic().ExportSchematic(commandLine, exps, exportPath)</pre>
+						<p>将命令序列按照导出设置导出为Schematic文件。</p>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+	</script>
+</body>
+</html>

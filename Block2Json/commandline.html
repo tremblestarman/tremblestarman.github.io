@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Block2Json</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                       Block2Json
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 主页</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-book"></i> 使用指南 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">使用指南</li>
+                    <li><a href="commandline.html">命令行</a></li>
+                    <li><a href="resource.html">资源文件</a></li>
+					<li><a href="detailed.html">详解</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-paper-plane-o"></i> 实例 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">实例</li>
+					<li><a href="quick_model.html">快速雕塑</a></li>
+                    <li><a href="quick_weapon.html">速建武器&工具</a></li>
+					<li><a href="vox2json.html">Vox转Json模型</a></li>
+                    <li><a href="obj2json.html">Obj转Json模型</a></li>
+                    <li><a href="mmd2json.html">MMD转Json模型</a></li>
+					<li><a href="2cubik.html">导入Cubik操作</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/Block2Json"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header" style="text-align:center;">Block2Json 命令行</h1>  
+                        <blockquote class="lead">—— 命令介绍</blockquote>
+                        <h3>命令</h3>
+                        <p><strong>Block2Json</strong>是一个控制台应用程序，你可以在cmd.exe中运行并设定命令，也可以双击打开键入命令。</p>
+                        <div id="carousel" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouse1" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1"></li>
+                                <li data-target="#carousel" data-slide-to="2"></li>
+                                <li data-target="#carousel" data-slide-to="3"></li>
+                                <li data-target="#carousel" data-slide-to="4"></li>
+                                <li data-target="#carousel" data-slide-to="5"></li>
+                                <li data-target="#carousel" data-slide-to="6"></li>
+                                <li data-target="#carousel" data-slide-to="7"></li>
+                            </ol>   
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="img/commands/biome.png" alt="1">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/fillflow.png" alt="2">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/filter_blocks.png" alt="3">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/filter_classes.png" alt="4">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/hollow.png" alt="5">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/nocompress.png" alt="6">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/smooth.png" alt="7">
+                                </div>
+                                <div class="item">
+                                    <img src="img/commands/version.png" alt="8">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                                <span class="sr-only">P</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                                <span class="sr-only">N</span>
+                            </a>
+                        </div>
+<hr/>
+                        <ul>
+                        <li><h4><i class="fa fa-fw fa-cog"></i> <a href="#version">Version 版本</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#unlimit">Unlimit 无限制</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#nocompress">Nocompress 无压缩</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#surface">Surface 表面保留</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#hollow">Hollow 镂空</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-cogs"></i> <a href="#fillflow">Fillflow 液体填充</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#smooth">Smooth 平滑材质</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#nopause">Nopause 无暂停</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-check-square-o"></i> <a href="#log">Log 日志</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-cog"></i> <a href="#biome">Biome 生物群系</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-filter"></i> <a href="#filter_classes">FilterClasses 方块类滤器</a></h4></li>
+                        <li><h4><i class="fa fa-fw fa-filter"></i> <a href="#filter_blocks">FilterBlocks 方块滤器</a></h4></li>
+                        </ul>
+<hr/>
+
+<div class="command">
+<a name="version"></a><h2><i class="fa fa-fw fa-circle-o"></i> version=</h2>
+<blockquote class="h4" style="color:#EEE">『用于定义模型所适用的版本』</blockquote>
+<h4>ep:</h4>
+<p><code>
+version=1.122</code></p>
+<p>将模型版本设置为1.122（即Minecraft Jave Edition 1.12.2）  </p>
+<p>▷ 材质、方块的更新，让模型无法兼容不同的版本<br/>▷ 不同版本的模型往往出现材质缺失的问题，即元素表现为紫黑材质<br/>▷ 通过定义［<code>BlockInfo</code>］中的<code>VersionFrom</code>和<code>VersionTo</code>，分析［<code>texture</code>］中的材质，解决不同版本的兼容问题<br/>▶ 版本格式：小数</p>
+<hr/>
+
+<a name="unlimit"></a><h2><i class="fa fa-fw fa-circle-o"></i> unlimit</h2>
+<blockquote class="h4" style="color:#EEE">『不限制模型大小』</blockquote>
+<h4>ep:</h4>
+<p><code>
+unlimit</code></p>
+<p>启用后，模型大小不会被程序缩至2^3</p>
+<p>▷ 即便启用，模型导入后仍将被游戏自动缩至2^3<br/>▷ 对于大小在2^3内的模型（即原方块文件的长宽高在32^3内）无效<br/>▶ 不启用将省去导入时游戏缩放模型的过程，提升模型的导入速度  </p>
+<hr/>
+
+<a name="nocompress"></a><h2><i class="fa fa-fw fa-circle-o"></i> nocompress</h2>
+<blockquote class="h4" style="color:#EEE">『不对模型进行压缩』</blockquote>
+<h4>ep:</h4>
+<p><code>
+nocompress</code>
+启用后，跳过压缩过程，模型将保留原始的文件大小</p>
+<p>▷ 压缩的原理是删除元素中的重合面<br/>▶ 压缩是压缩模型文件大小，并降低导入模型后在游戏内的资源消耗  </p>
+<hr/>
+
+<a name="surface"></a><h2><i class="fa fa-fw fa-circle-o"></i> surface</h2>
+<blockquote class="h4" style="color:#EEE">『仅保留表面』</blockquote>
+<h4>ep:</h4>
+<p><code>
+surface</code>
+启用后，删除所有不可见面，仅保留表面</p>
+<p>▷ 对模型进一步压缩，尤其是对空心的物体<br/>▷ 处理时间很长<br/>▶ 基于模型的面处理，十分精准  </p>
+<hr/>
+
+<a name="hollow"></a><h2><i class="fa fa-fw fa-circle-o"></i> hollow</h2>
+<blockquote class="h4" style="color:#EEE">『镂空实心物体内部』</blockquote>
+<h4>ep:</h4>
+<p><code>
+hollow</code>
+启用后，镂空实心物体内部。</p>
+<p>▷ 将方块元素作为立方体元素处理<br/>▶ 会在一定程度上增加模型的大小  </p>
+<hr/>
+
+<a name="fillflow"></a><h2><i class="fa fa-fw fa-circle-o"></i> fillflow</h2>
+<blockquote class="h4" style="color:#EEE">『液体填充』</blockquote>
+<h4>ep:</h4>
+<p><code>
+fillflow=(7,7,7)35[1]</code>
+在坐标(7,7,7)生成液体流，液体浸没的区域被填充为橙色羊毛</p>
+<p>▷ 将方块元素作为立方体元素处理<br/>▷ 加上前缀&#39;r&#39;进行反向填充处理<br/>▶ 一般可以用<code>r(0,0,0)air</code>快速删去不可见面（前提启用<code>compress</code>）  </p>
+<hr/>
+
+<a name="smooth"></a><h2><i class="fa fa-fw fa-circle-o"></i> smooth</h2>
+<blockquote class="h4" style="color:#EEE">『使用平滑材质』</blockquote>
+<h4>ep:</h4>
+<p><code>
+smooth</code>
+启用后，同种方块将使用统一的材质</p>
+<p>▷ 主要控制元素的<code>uv</code>，让材质平滑<br/>▷ 不启用时，元素的<code>uv</code>是随机的，让材质有噪点  </p>
+<hr/>
+
+<a name="nopause"></a><h2><i class="fa fa-fw fa-circle-o"></i> nopause</h2>
+<blockquote class="h4" style="color:#EEE">『不暂停』</blockquote>
+<h4>ep:</h4>
+<p><code>
+nopause</code></p>
+<p>忽略所有错误导致的暂停，并自动退出</p>
+<hr/>
+
+<a name="log"></a><h2><i class="fa fa-fw fa-circle-o"></i> log</h2>
+<blockquote class="h4" style="color:#EEE">『生成日志文件』</blockquote>
+<h4>ep:</h4>
+<p><code>
+log</code></p>
+<p>收集所有错误信息，在程序执行结束后生成一个日志文件</p>
+<hr/>
+
+<a name="biome"></a><h2><i class="fa fa-fw fa-circle-o"></i> biome=</h2>
+<blockquote class="h4" style="color:#EEE">『用于定义模型所在的生物群系』</blockquote>
+<h4>ep:</h4>
+<p><code>
+biome=TheVoid</code></p>
+<p>将模型生物群系设为The Void</p>
+<p>▷ 使用<code>colormap</code>材质的模型，在不同生物群系下颜色不同<br/>▷ 通过设定［<code>BlockInfo</code>］中<code>Textures</code>的<code>Params</code>，设置相关参数<br/>▶ 生物群系名称格式：<code>首字母大写</code>&amp;<code>无空格</code>  </p>
+<hr/>
+
+<a name="filter_classes"></a><h2><i class="fa fa-fw fa-circle"></i> filter_classes=</h2>
+<blockquote class="h4" style="color:#EEE">『过滤所选的模型类型』</blockquote>
+<h4>ep:</h4>
+<p><code>
+filter_classes=Building.json;Liquid.json</code></p>
+<p>▷ 将所选的［<code>BlockInfo</code>］从资源列表中过滤掉<br/>▷ 模型中不会出现所选的［<code>BlockInfo</code>］中所有定义的元素<br/>▶ 滤器格式：<br/><code>
+BlockInfo.json; ...</code>
+(<code>.json</code>不可省略、用<code>;</code>分隔不同的［<code>BlockInfo</code>］)</p>
+<hr/>
+
+<a name="filter_blocks"></a><h2><i class="fa fa-fw fa-circle"></i> filter_blocks=</h2>
+<blockquote class="h4" style="color:#EEE">『过滤所选的模型类型』</blockquote>
+<h4>ep:</h4>
+<p><code>
+filter_classes=Full-Block.json;1[0];stone[1];minecraft:oak_trapdoor[facing=north,half=bottom,open=false]</code></p>
+
+<p>▷ 将所选的［<code>Block</code>］从资源列表中过滤掉<br/>▷ 模型中不会出现所选的［<code>Block</code>］中所对应的元素<br/>▶ 滤器格式  (即<code>方块集合表达式</code>)：  </p>
+<p><code>
+BlockTag.json;Id[Data]; ...</code>
+ (<code>.json</code>不可省略且表示［<code>BlockInfo</code>］、用<code>;</code>分隔不同的［<code>Block</code>］、<code>Id</code>和<code>Data</code>既支持数字也支持字符串)</p>
+</div><hr/>
+                        <p style="text-align:right"><a href="index.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-left"></i></button></a> <a href="resource.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-right"></i></button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+	</script>
+</body>
+</html>

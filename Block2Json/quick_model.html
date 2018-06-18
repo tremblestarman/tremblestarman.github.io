@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Block2Json</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+    <style>
+	li {
+		list-style-type:none;
+	}
+	body p {
+		text-indent:0px;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                       Block2Json
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 主页</a>
+                </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-book"></i> 使用指南 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">使用指南</li>
+                    <li><a href="commandline.html">命令行</a></li>
+                    <li><a href="resource.html">资源文件</a></li>
+					<li><a href="detailed.html">详解</a></li>
+                  </ul>
+				</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-paper-plane-o"></i> 实例 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">实例</li>
+					<li><a href="quick_model.html">快速雕塑</a></li>
+                    <li><a href="quick_weapon.html">速建武器&工具</a></li>
+					<li><a href="vox2json.html">Vox转Json模型</a></li>
+                    <li><a href="obj2json.html">Obj转Json模型</a></li>
+                    <li><a href="mmd2json.html">MMD转Json模型</a></li>
+					<li><a href="2cubik.html">导入Cubik操作</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/Block2Json"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+				<li>
+                    <a href="http://www.mcbbs.net/thread-781432-1-1.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header" style="text-align:center;">实例 - 快速雕塑</h1>  
+                        <blockquote class="lead">—— 快速建立Json模型</blockquote>
+						<a name="blockinfo"></a><hr/>
+                        <h3>获取方块文件</h3>
+                        <a name="recommanded_websites"></a><p>首先你需要一个方块文件(.schematic或.nbt)，你可以到以下链接中获取：</p>
+						<ul>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="http://www.minecraft-schematics.com/images/blueprint_100.png" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="http://www.minecraft-schematics.com/">minecraft-schematics.com</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">一个schematic分享社区，允许玩家自由上传、下载、搜索、评论、评分。该网站目前已分门别类地搜罗了近万份schematic，可以称得上是最便捷的schematic获取源。</blockquote>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="http://www.minecraft-schematics.net/images/icons/favicon.png" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="http://www.minecraft-schematics.net/"> minecraft-schematics.net</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">不只是schematic的分享社区，还包括了材质、皮肤。同样允许玩家自由分享，也有schematic的分类，但干货不是太多，质量也不是很高。</blockquote>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="https://www.planetminecraft.com/favicon.ico" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="https://www.planetminecraft.com/resources/projects/?share=schematic"> planetminecraft.com: schematics</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">全球最大的Minecraft资源分享站，其中分类为"可下载schematic"的作品。你可以进一步使用搜索功能，找到你想要的schematic。</blockquote>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="https://minecraftstuff.net/sites/all/themes/minecraftstuff/favicon.ico" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="https://minecraftstuff.net/schematics"> minecraftstuff.net: schematics</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">同样是一个资源分享站，其中包括了schematic作品。但仅提供搜索与排序，没有分类。</blockquote>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="https://www.schematicstore.com/favicon.ico" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="https://www.schematicstore.com"> schematicstore.com</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">付费schematic资源站。主要都是一些专业的建筑体素模型作品。资源比较贵，不推荐。</blockquote>
+						<li class="h4" style="color: #EEE; text-indent:10px"><img src="https://chunkfactory.com/favicon.png" style="width: 25px; height:20px; padding-right:5px;"></img> <a href="https://chunkfactory.com/category/schematics/"> chunkfactory.com</a></li>
+						<blockquote class="h5" style="background:#444; color: #BBB; text-indent:15px">同样是一个付费schematic资源站。也主要是一些专业的建筑体素模型作品。你甚至还可以购买礼品卡。资源比较贵，不推荐。</blockquote>
+						</ul>
+						<p>或者你可以直接从你的地图中获取：</p>
+						<ul>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 使用Mcedit</h4></li>
+							<img src="img/p/1/1.png" style="width: 600px"></img>
+							<P>选中一块区域后，<code>Ctrl+C</code>或者点击左边栏的<code>Copy</code>复制该区域。接下来点击复制区域框下的<code>Save</code>，在保存窗口中选择.schematic格式即可。</P>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 使用结构方块</h4></li>
+							<img src="img/p/1/2.png" style="width: 600px"></img>
+							<P>使用结构方块，切换到<code>[S]</code>模式，给该结构命名，并调整相关参数（例如区域起始点，区域大小等），在一切就绪后点击<code>Save</code>即可。最后你可以在存档的<code>generated/minecraft/structures</code>（1.13）或<code>structures</code>（1.12）文件夹下找到刚刚保存的结构。</p>
+						</ul>
+						<hr/>
+						<h3>生成Json模型</h3>
+						<ul>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 基本步骤</h4></li>
+							<p>获取了方块文件后，就是使用<strong>Block2Json</strong>生成模型了。</p>
+							<img src="img/p/1/3.png" style="width: 350px"></img>
+							<p>找到<strong>Block2Json.exe</strong>并打开。</p>
+							<img src="img/p/1/4.png" style="width: 600x"></img>
+							<p>等待资源加载后，得到如上的界面，用于输入【<a href="commandline.html">命令行</a>】命令。</p>
+							<img src="img/p/1/5.png" style="width: 600x"></img>
+							<p>按下<code>↵</code>，等待生成完成。</p>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 开启记录</h4></li>
+							<img src="img/p/1/6.png" style="width: 600x"></img>
+							<p>在命令行中添加命令<code>log</code>，用于记录错误。</p>
+							<img src="img/p/1/7.png" style="width: 600x"></img>
+							<p>按下<code>↵</code>，全部过程结束时会在程序文件夹下生成错误信息记录。</p>
+							<img src="img/p/1/9.png" style="width: 600x"></img>
+							<p>这便是得到的Json模型文件和log文件。（'x'处表示系统时间）</p>
+						</ul>
+						<hr/>
+						<h3>导入Minecraft</h3>
+						<p>生成了模型后，就可以将模型导入到Minecraft了。模型在Minecraft中分为方块模型和物品模型，其存放的位置和在游戏中的展示方式并不相同。</p>
+						<ul>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 方块模型</h4></li>
+							<p>以我的头为原型做成的一个像素模型，转化的"my_skull.json"模型为例。</p>
+							<img src="img/p/1/11.png" style="width: 500px"></img>
+							<P>把json模型拖入到材质包的<code>assets/minecraft/models/block</code>文件夹中。</P>
+							<img src="img/p/1/12.png" style="width: 350px"></img>
+							<P>把文件名改名为一个方块（图中为萤石）</P>
+							<img src="img/p/1/13.png" style="width: 250px"></img>
+							<P>读取资源包，进入游戏，就能看到这个方块的模型已经被修改了。</P>
+							<img src="img/p/1/13_.png" style="width: 600px"></img>
+							<P>因为修改的只是萤石的模型，所以仍然可以发光。</P>
+							<li><h4><i class="fa fa-fw fa-square-o"></i> 物品模型</h4></li>
+							<img src="img/p/1/14.png" style="width: 500px"></img>
+							<P>把json模型拖入到材质包的<code>assets/minecraft/modelsitem</code>文件夹中。</P>
+							<img src="img/p/1/14_.png" style="width: 600px"></img>
+							<P>将文件名改为一个物品或方块（图中仍然为萤石），然后载入资源包并打开游戏。从物品栏和手持栏来看，和上面的方块模型毫无区别。</P>
+							<img src="img/p/1/14__.png" style="width: 600px"></img>
+							<P>唯一的区别在于放置后，其方块模型不会被影响。</P>
+						</ul>
+						
+                        <p style="text-align:right"><a href="detailed.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-left"></i></button></a> <a href="quick_weapon.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-right"></i></button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+	</script>
+</body>
+</html>
