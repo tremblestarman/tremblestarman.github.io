@@ -78,14 +78,14 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
 						<h1 class="page-header" style="text-align:center;">基本流</h1>
-						<div class="lead" style="text-align:center;">介绍代码生成一段红石音乐基本的流程</div>
-						<h3>设定对照表文件夹路径 *</h3>
+						<div class="lead" style="text-align:center;">用代码生成红石音乐的基本流程</div>
+						<h3>设定对照表文件夹 *</h3>
 						<pre>InheritExpression.SetCompareLists(path);</pre>
-						<p>这一步是必须的，即使没有对照表也需要设置一个路径，否则将报错。路径为文件夹的绝对路径。</p>
+						<p>这一步是必须的，即使没有对照表也需要设置一个文件夹的路径，否则将报错。路径为文件夹的绝对路径。</p>
 						<hr/>
 						<h3>实例化时间序列</h3>
 						<pre>var timeLine = new TimeLine().Serialize(midiPath, wavPath, BPM, fre_count, vol_count, cycle)</pre>
-						<p>几个属性（Midi路径、Wav路径、BPM、频率采样数、振幅采样数、采样周期）均为选填值。文件路径是绝对路径。</p>
+						<p>几个属性（Midi路径、Wav路径、BPM、频率采样数、振幅采样数、采样周期）均为选填。其中文件路径是绝对路径。</p>
 						<h3>设置</h3>
 						<ul>
 							<li><h4>Midi设置</h4></li>
@@ -106,8 +106,8 @@
 									</ul>
 									<li>键参数</li>
 									<pre>timeLine.EnableMidi(bool enable = true, string track = "", string instrument = "", int index = -1, string param = "")</pre>
-									<p>track表示音轨，instrument指明乐器，index为特定索引的键。</p>
-									<p>键参数有以下几个：（留空表示全体）</p>
+									<p>track表示音轨，instrument指乐器，index为键的索引位置。</p>
+									<p>键的参数有以下几个：</p>
 									<ul>
 										<li>DeltaTickStart</li>
 										<li>MinecraftTickStart</li>
@@ -124,8 +124,8 @@
 								<li><h5>Playsound参数</h5></li>
 								<p>Playsound命令中也有许多参数需要设定，包括最重要的音色名和子表达式</p>
 								<pre>timeLine.Sound_属性(? param, string track = "", string instrument = "", int index = -1)</pre>
-								<p>类似键参数，也可以指明音轨、乐器、特定键，留空表示全体。</p>
-								<p>Playsound属性有以下几个：</p>
+								<p>类似键参数，也是指音轨、乐器、键位置</p>
+								<p>Playsound的属性有以下几个：</p>
 								<ul>
 									<li>SoundName</li>
 									<li>ExecuteCood</li>
@@ -141,15 +141,14 @@
 								</ul>
 							</ul>
 							<li><h4>Wave设置</h4></li>
-							<p>Wave设置除了需要参数，还需指定声道。</p>
 							<pre>EnableWave(bool enable = true, int index = -1, string channel = "", string param = "")</pre>
-							<p>其中索引表示的是一个采样的索引，频道可为<code>Left</code>或<code>Right</code>，参数有以下几个：</p>
+							<p>其中索引表示一个采样的索引位置，声道可为<code>"Left"</code>或<code>"Right"</code>。Wave的参数有以下几个：</p>
 							<ul>
 								<li>FrequencyPerTick</li>
 								<li>VolumePerTick</li>
 							</ul>
-							<p>（索引、声道或参数留空表示全体。）</p>
 						</ul>
+						<p>（上面提到的参数若为空则表示全体。）</p>
 						<h3>实例化命令序列</h3>
 						<pre>var commandLine = new CommandLine().Serialize(timeLine);</pre>
 						<p>一个命令序列中有"Start"、"KeyFrame"、"End"三个列表，分别代表初始化命令、命令流、结束命令。</p>
