@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="favicon.ico">
 </head>
-<body">
+<body>
 	
 	<div id="wrapper">
         <div class="overlay"></div>
@@ -77,14 +77,91 @@
           <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-						<h1 class="page-header" style="text-align:center;">全局设置</h1>
-						<p>觉得一个个地设置太慢了？全局设置给予你对全体元素统一设置的机会。</p>
-						<hr/><h3>批量设置</h3>
-						<p><img alt="" src="assets/public/public-0.png"/></p>
-						<p>这是一个熟悉的界面，修改设置后，点击右上方对勾保存设置。全局设置里保存设置将会覆盖掉原先的设置，这可能是毁灭性的，三思而后行。</p>
-						<hr/><h3>基本信息输出</h3>
-						<p><img alt="" src="assets/public/public-1.png"/></p>
-						<p>有三个基本信息（音轨数、四分之一音符占刻、BPM），启用后将会输出到计分板中。</p>
+						<h1 class="page-header" style="text-align:center;">基本流</h1>
+						<div class="lead" style="text-align:center;">介绍代码生成一段红石音乐基本的流程</div>
+						<h3>设定对照表文件夹路径 *</h3>
+						<pre>InheritExpression.SetCompareLists(path);</pre>
+						<p>这一步是必须的，即使没有对照表也需要设置一个路径，否则将报错。路径为文件夹的绝对路径。</p>
+						<hr/>
+						<h3>实例化时间序列</h3>
+						<pre>var timeLine = new TimeLine().Serialize(midiPath, wavPath, BPM, fre_count, vol_count, cycle)</pre>
+						<p>几个属性（Midi路径、Wav路径、BPM、频率采样数、振幅采样数、采样周期）均为选填值。文件路径是绝对路径。</p>
+						<h3>设置</h3>
+						<ul>
+							<li><h4>Midi设置</h4></li>
+							<ul>
+								<li><h5>Midi全局 & 键参数</h5></li>
+								<p>Midi全局参数和键参数可被启用或禁用（默认禁用），以同步输出至计分板。</p>
+								<ul>
+									<li>全局参数</li>
+									<pre>timeLine.Enable(bool enable = true, string param = "")</pre>
+									<p>全局参数有以下几个：（留空表示全体）</p>
+									<ul>
+										<li>MidiFileFormat</li>
+										<li>MidiTracksCount</li>
+										<li>MidiDeltaTicksPerQuarterNote</li>
+										<li>MidiBeatPerMinute</li>
+										<li>AudioFileFormat</li>
+										<li>TotalTicks</li>
+									</ul>
+									<li>键参数</li>
+									<pre>timeLine.EnableMidi(bool enable = true, string track = "", string instrument = "", int index = -1, string param = "")</pre>
+									<p>track表示音轨，instrument指明乐器，index为特定索引的键。</p>
+									<p>键参数有以下几个：（留空表示全体）</p>
+									<ul>
+										<li>DeltaTickStart</li>
+										<li>MinecraftTickStart</li>
+										<li>DeltaTickDuration</li>
+										<li>MinecraftTickDuration</li>
+										<li>BarIndex</li>
+										<li>BeatDuration</li>
+										<li>Channel</li>
+										<li>Pitch</li>
+										<li>Velocity</li>
+										<li>Playsound</li>
+									</ul>
+								</ul>
+								<li><h5>Playsound参数</h5></li>
+								<p>Playsound命令中也有许多参数需要设定，包括最重要的音色名和子表达式</p>
+								<pre>timeLine.Sound_属性(? param, string track = "", string instrument = "", int index = -1)</pre>
+								<p>类似键参数，也可以指明音轨、乐器、特定键，留空表示全体。</p>
+								<p>Playsound属性有以下几个：</p>
+								<ul>
+									<li>SoundName</li>
+									<li>ExecuteCood</li>
+									<li>ExecuteTarget</li>
+									<li>PlayTarget</li>
+									<li>PlaySource</li>
+									<li>InheritExpression</li>
+									<li>ExtraDelay</li>
+									<li>MandaVolume</li>
+									<li>PercVolume</li>
+									<li>Enable</li>
+									<li>StopSound</li>
+								</ul>
+							</ul>
+							<li><h4>Wave设置</h4></li>
+							<p>Wave设置除了需要参数，还需指定声道。</p>
+							<pre>EnableWave(bool enable = true, int index = -1, string channel = "", string param = "")</pre>
+							<p>其中索引表示的是一个采样的索引，频道可为<code>Left</code>或<code>Right</code>，参数有以下几个：</p>
+							<ul>
+								<li>FrequencyPerTick</li>
+								<li>VolumePerTick</li>
+							</ul>
+							<p>（索引、声道或参数留空表示全体。）</p>
+						</ul>
+						<h3>实例化命令序列</h3>
+						<pre>var commandLine = new CommandLine().Serialize(timeLine);</pre>
+						<p>一个命令序列中有"Start"、"KeyFrame"、"End"三个列表，分别代表初始化命令、命令流、结束命令。</p>
+						<p>一个命令序列也允许嵌入的其他命令序列。</p>
+						<pre>commandLine1 = commandLine1.Combine(commandLine1, commandLine2)</pre>
+						<p>表示将commandLine2中的所有命令嵌入到commandLine1中（从commandLine1头部开始）。</p>
+						<h3>生成Schematic</h3>
+						<p>首先需要实例化导出设置。</p>
+						<pre>var exps = new ExportSetting() { AlwaysActive = true, AlwaysLoadEntities = false, AutoTeleport = true, Direction = 0, Width = 5, Type = ExportType.Universal }</pre>
+						<p>表示保持加载命令流，不保持加载实体，自动传送，向X+延伸，序列宽度为5，通用Schematic格式。</p>
+						<pre>new Schematic().ExportSchematic(commandLine, exps, exportPath)</pre>
+						<p>将命令序列按照导出设置导出为Schematic文件。</p>
                     </div>
                 </div>
           </div>
