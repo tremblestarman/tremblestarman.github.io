@@ -138,21 +138,33 @@ a.EnableMidi(true, "D", "", -1, "Pitch");</pre>
 						<ul>
 							<li><h4>计分板</h4></li>
 								<ul>
+								描述整体属性的计分板有以下几个：
+								<ul>
+									<li>MidiFileFormat <code>Midi文件格式</code></li>
+									<li>MidiTracksCount <code>Midi音轨总数</code></li>
+									<li>MidiDeltaTdiv4 <code>Midi¼音符占刻</code></li>
+									<li>MidiBPM <code>BPM</code></li>
+									<li>AudioFileFormat <code>Wav文件格式</code></li>
+									<li>TotalTicks <code>总刻数</code></li>
+								</ul>
 								<li><h5>键</h5></li>
 									<p>键的计分板有以下几个：</p>
 									<ul>
-										<li>MidiFileFormat</li>
-										<li>MidiTracksCount</li>
-										<li>MidiDeltaTdiv4</li>
-										<li>MidiBPM</li>
-										<li>AudioFileFormat</li>
-										<li>TotalTicks</li>
+										<li>DelSta <code>键起始时间</code></li>
+										<li>TickSta <code>键起始刻数</code></li>
+										<li>DelDur <code>键持续时间</code></li>
+										<li>TickDur <code>键持续刻数</code></li>
+										<li>BarInd <code>小节索引</code></li>
+										<li>BeatDur <code>小节长度</code></li>
+										<li>Channel <code>频道</code></li>
+										<li>Pitch <code>音高</code></li>
+										<li>Velocity <code>力度</code></li>
 									</ul>
 								<li><h5>Wave</h5></li>
 									<p>波形的计分板有以下几个：</p>
 									<ul>
-										<li>Fre</li>
-										<li>Vol</li>
+										<li>Fre <code>采样频率</code></li>
+										<li>Vol <code>采样振幅</code></li>
 									</ul>
 								</ul>
 							<li><h4>实体对象</h4></li>

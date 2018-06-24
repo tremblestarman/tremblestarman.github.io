@@ -131,7 +131,7 @@
 						<p><code>piano.p%pfff</code></p>
 						<p>上面的表达式用于RealPiano。如果某键的音高为72，实际得到的字符便是：</p>
 						<p><code>piano.p72fff</code></p>
-						<p>自定义持续时间和自定义音高是作为匹配列表的json文件，放在CompareList文件夹中，每次启动A2M时可被导入。它的格式很简单，例如octaves.json：</p>
+						<p>自定义持续时间和自定义音高是作为匹配列表的json文件，放在config/compare文件夹中，每次启动A2M时可被导入。它的格式很简单，例如octaves.json：</p>
 						<p><code>
 						{
 							&quot;0&quot;: &quot;c0&quot;,
@@ -149,10 +149,6 @@
 							...
 						}
 						</code></p>
-						<li><h5>音色名 &amp; 子表达式的快速选择</h5></li>
-						<p><img alt="" src="assets/midi/midi-8.png"/></p>
-						<p>A2M内置了用于快速选择音色名和子表达式的配置文件(用于soma资源包)，储存在InstrumentList文件夹中。</p>
-						<p>参照soma.json的格式，你可以制作配合你的资源包的配置文件。把它放在InstrumentList文件夹中，每次启动A2M时可被导入。</p>
 						<li><h5>一些资源包的填写方法</h5></li>
 						<p>对于RealPiano</p>
 						<p><code>音色名:&quot;lkrb&quot;, 子表达式:&quot;piano.p%pfff&quot;</code></p>
@@ -176,6 +172,22 @@
 						<hr/><h3>保存设置</h3>
 						<p><img alt="" src="assets/midi/midi-13.png"/></p>
 						<p>每次修改属性后，别忘了保存。</p>
+						<h3>自动补全</h3>
+						<p><img alt="" src="assets/midi/midi-14.png"/></p>
+						<p>Playsound设置中，对相同的乐器，每次都需要填写相同的内容是件相当麻烦的事情。不过没关系，A2M内置了自动补全。(pre-07更新)</p>
+						<p><img alt="" src="assets/midi/midi-15.png"/></p>
+						<p>打开自动补全设置后，选择补全规则和匹配模式</p>
+						<p><img alt="" src="assets/midi/midi-16.png"/></p>
+						<p><img alt="" src="assets/midi/midi-17.png"/></p>
+						<p><img alt="" src="assets/midi/midi-18.png"/></p>
+						<p>点击对勾确认即可。</p>
+						<p><img alt="" src="assets/midi/midi-8.png"/></p>
+						<p>开启了自动补全后，音色名的下拉框中有许多选项，选择后将按照对应的规则自动补全相关设置。（这会覆盖原先的设置，请慎重选择。）</p>
+						<p><img alt="" src="assets/midi/midi-19.png"/></p>
+						<p>如果选择了一键自动补全，所有乐器的Playsound设置都将被自动补全。（这也会覆盖原先的设置，请谨慎选择。）</p>
+						<p></p>
+						<h4>自动补全配置文件</h4>
+						<p>自动补全配置文件中规定了自动补全的规则、模式。你可以参照内置的soma.json的格式，制作配合你的资源包的配置文件，把它放在config/autofill文件夹中即可。</p>
                     </div>
                 </div>
           </div>
