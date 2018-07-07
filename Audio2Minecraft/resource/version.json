@@ -1,5 +1,5 @@
 {
-	"version": "pre-11",
-	"download": "https://tremblestarman.github.io/Audio2Minecraft/resource/Audio2Minecraft Preview11.rar",
-	"log": "preview 11\n- [wave][expo]\u4fee\u590d\u90e8\u5206\u6587\u672c\u6846\u7684\u8f93\u5165\u95ee\u9898\n- [a2mc]\u4f18\u5316\u7248\u672c\u66f4\u65b0\u68c0\u6d4b\n- [a2mc]\u52a0\u5feb\u4e86\u7a0b\u5e8f\u542f\u52a8\u901f\u5ea6\n- [a2mc]\u53bb\u9664\u6700\u5927\u5316\n- [auto]\u4fee\u590d\u4e86soma.json\u4e2d\u7684\u90e8\u5206\u5339\u914d"
+	"version": "pre-12",
+	"download": "https://tremblestarman.github.io/Audio2Minecraft/resource/Audio2Minecraft Preview12.rar",
+	"log": "preview 12\n- [midi]\u652f\u6301\u4ee5playsound\u4e2d\u7684\u97f3\u9ad8\u8f93\u51fa\n- [midi]\u4fee\u590dmidi\u97f3\u8f68\u97f3\u91cf\u9ed8\u8ba4\u503c\u95ee\u9898\n- [sche]\u4fee\u590d\u56e0\u81ea\u52a8\u4f20\u9001\u800c\u5bfc\u81f4\u7684schematic\u6ea2\u51fa\u95ee\u9898\n- [a2mc]\u65b0\u589edemo-default\uff0c\u7528\u4e8e\u539f\u7248\u7684\u97f3\u7b26\u76d2\u97f3\u8272\n- [a2mc]\u66f4\u65b0\u4e86audio2minecraft\u5b98\u7f51\n- [auto]\u518d\u6b21\u4fee\u6539soma.json\u90e8\u5206\u5339\u914d"
 }

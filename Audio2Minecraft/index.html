@@ -81,12 +81,19 @@
                         <p><strong>Audio2Minecraft</strong>是一款红石音乐转化器，能将midi转化为播放速率为20t/s的命令方块流。支持导入.mid、.wav、.lrc文件，并分别以playsound、scoreboard、tellraw/title的命令形式在Minecraft中输出。</p>
                         <p>A2M致力于简化红石音乐的制作过程，但并不是完全替代红石音乐的制作。A2M并不是刻板地转化文件，用户还需要通过对多个属性的设置，让A2M能按照用户意愿输出满意的红石音乐。这些设置基本涵盖了所有可调试内容，以满足用户需求。</p>
 						<p style="text-align:center;"><img src="assets/title.png" style="width:600px;"></img></p>
-                        <p>不同于NoteBlockStudio(NBS)，A2M仅是一款转化器，没有编曲功能。但相比于NBS导出的播放速率为10t/s的红石流，A2M的输出要精确得多。NBS以音符盒作为播放源，而A2M则以playsound命令作为播放源，因此A2M仅支持播放资源包中的音效。基于命令方块后，A2M还能将波形同步映射至计分板上，将歌词同步在聊天栏输出。</p>
-                        <p><a href="https://github.com/tremblestarman/MineAudio">Audio2Minecraft</a>已开源。目前处于测试版(pre-11)，许多功能有待完善。</p>
+                        <p>不同于NoteBlockStudio(NBS)，A2M仅是一款转化器，没有编曲功能。但相比于NBS导出的播放速率为10t/s的红石流，A2M的输出要精确得多。NBS以音符盒作为播放源，而A2M则以playsound命令作为播放源，不仅支持原版音色，还支持各种资源包。基于命令方块后，A2M还能将波形同步映射至计分板上，将歌词同步在聊天栏输出。</p>
+                        <p><a href="https://github.com/tremblestarman/MineAudio">Audio2Minecraft</a>已开源。目前处于测试版(pre-12)，许多功能有待完善。</p>
                         <hr/>
                         <h1>Audio2Minecraft.dll</h1>
 						<p>Audio2Minecraft的类库，基于<a href="https://github.com/naudio/NAudio">NAudio</a>和<a href="https://github.com/fragmer/fNbt">FNbt</a>，可供开发人员使用。</p>
 						<p>相比于A2MUI，A2M.dll的优势在于无限制，你可以通过代码随心所欲地设置属性，按照你的想法增减序列，在输出的命令方块流中加入任何内容，做到更高级的效果。</p>
+						<hr/>
+						<h3>资源包推荐</h3>
+						<p>A2M当然支持原版的音符盒音色，但为了更优的听觉体验，你也可以使用资源包音色制作红石音乐。</p>
+						<ul>
+							<li><h4>soma资源包 <a href="http://www.mcbbs.net/thread-709092-1-1.html" target="_blank"><i class="fa fa-fw fa-angle-double-left"></i></a><h4></li>
+							<p>资源包包含"Roland GM/GS sound Set"音源的0-120号乐器和打击乐器，共121个音色的全音域。</p>
+						</ul>
 						<hr/>
 						<h3>反馈</h3>
                         <p>在以下的链接中你可以联系到我，反馈任何疑问、Bug、特性。</p>
