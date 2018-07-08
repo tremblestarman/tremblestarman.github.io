@@ -80,7 +80,7 @@
 						<h1 class="page-header" style="text-align:center;">基本流</h1>
 						<div class="lead" style="text-align:center;">用代码生成红石音乐的基本流程</div>
 						<h3>设定对照表文件夹 *</h3>
-						<pre>InheritExpression.SetCompareLists(path);</pre>
+						<pre>InheritExpression.SetCompareLists(path)</pre>
 						<p>这一步是必须的，即使没有对照表也需要设置一个文件夹的路径，否则将报错。路径为文件夹的绝对路径。</p>
 						<hr/>
 						<h3>实例化时间序列</h3>
@@ -141,7 +141,7 @@
 								</ul>
 							</ul>
 							<li><h4>Wave设置</h4></li>
-							<pre>EnableWave(bool enable = true, int index = -1, string channel = "", string param = "")</pre>
+							<pre>timeLine.EnableWave(bool enable = true, int index = -1, string channel = "", string param = "")</pre>
 							<p>其中索引表示一个采样的索引位置，声道可为<code>"Left"</code>或<code>"Right"</code>。Wave的参数有以下几个：</p>
 							<ul>
 								<li>FrequencyPerTick</li>
@@ -150,7 +150,7 @@
 						</ul>
 						<p>（上面提到的参数若为空则表示全体。）</p>
 						<h3>实例化命令序列</h3>
-						<pre>var commandLine = new CommandLine().Serialize(timeLine);</pre>
+						<pre>var commandLine = new CommandLine().Serialize(timeLine)</pre>
 						<p>一个命令序列中有"Start"、"KeyFrame"、"End"三个列表，分别代表初始化命令、命令流、结束命令。</p>
 						<p>一个命令序列也允许嵌入的其他命令序列。</p>
 						<pre>commandLine1 = commandLine1.Combine(commandLine1, commandLine2)</pre>
@@ -160,7 +160,21 @@
 						<pre>var exps = new ExportSetting() { AlwaysActive = true, AlwaysLoadEntities = false, AutoTeleport = true, Direction = 0, Width = 5, Type = ExportType.Universal }</pre>
 						<p>表示保持加载命令流，不保持加载实体，自动传送，向X+延伸，序列宽度为5，通用Schematic格式。</p>
 						<pre>new Schematic().ExportSchematic(commandLine, exps, exportPath)</pre>
-						<p>将命令序列按照导出设置导出为Schematic文件。</p>
+						<p>将命令序列按照导出设置导出为Schematic文件。</p></hr>
+						<h3>基本流代码总览</h3>
+						<pre>//初始化设置
+InheritExpression.SetCompareLists(path); //设置对照表文件夹
+//时间序列操作
+var timeLine = new TimeLine().Serialize(midiPath, wavPath, BPM, fre_count, vol_count, cycle); //生成时间序列
+timeLine.Enable(bool enable = true, string param = ""); //设置全局参数
+timeLine.EnableMidi(bool enable = true, string track = "", string instrument = "", int index = -1, string param = ""); //设置键参数
+timeLine.Sound_属性(? param, string track = "", string instrument = "", int index = -1); //设置Playsound参数
+timeLine.EnableWave(bool enable = true, int index = -1, string channel = "", string param = ""); // 设置Wave参数
+//命令序列操作
+var commandLine = new CommandLine().Serialize(timeLine); //生成命令序列
+//导出操作
+var exps = new ExportSetting() { AlwaysActive = true, AlwaysLoadEntities = false, AutoTeleport = true, Direction = 0, Width = 5, Type = ExportType.Universal }; //导出设置
+new Schematic().ExportSchematic(commandLine, exps, exportPath); //生成schematic</pre>
                     </div>
                 </div>
           </div>

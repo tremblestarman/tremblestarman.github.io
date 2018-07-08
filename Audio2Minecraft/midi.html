@@ -89,7 +89,7 @@
 						<hr/><h3>启用与禁用</h3>
 						<p><img alt="" src="assets/midi/midi-2.png"/></p>
 						<p>音轨列表中点击方框或名称将禁用一条音轨。乐器列表中则是禁用一类乐器。再次点击则启用。</p>
-						<p><code>图中我们禁用&quot;Percussion&quot;音轨，启用乐器&quot;Electric Snare&quot;，在实际导出时，乐器&quot;Electric Snare&quot;是启用的。因为在导出时我们基于的是乐器而非音轨，所以音轨被禁用并不影响乐器的输出。</code></p>
+						<p><code>图中我们禁用&quot;Percussion&quot;音轨，启用乐器&quot;Electric Snare&quot;，在实际导出时，乐器&quot;Electric Snare&quot;仍是启用的。音轨被禁用并不影响音轨中乐器的启用。</code></p>
 						<hr/><h3>折叠与选中</h3>
 						<p><img alt="" src="assets/midi/midi-3.png"/></p>
 						<p>点击左方小三角展开或折叠。点击方框或名称外的部分选中。元素未被禁用时，属性才允许被修改。</p>
@@ -171,8 +171,8 @@
 						<p><code>播放音量 = 音轨音量 * 力度 * λ</code></p>
 						<ul><li><h4>音高播放</h4></li></ul>
 						<p><img alt="" src="assets/midi/midi-14.png"/></p>
-						<p>将音高转为playsound中的音高。由于playsound中的音高范围0.5~2.0仅对应实际音高的54~78(F♯2~F♯4)，类似NoteBlcokStudio，音高将会被自动升降至这个范围内。
-						在资源包中，如果音色的音高可利用音色名和子表达式表示，则无需此选项。</p>
+						<p>将音高转为playsound中的音高。由于playsound中的音高范围0.5~2.0仅对应实际音高的54~78(F♯2~F♯4)，类似NoteBlcokStudio，音高将会被自动升降至这个范围内。</p>
+						<p>在资源包中，如果音高可利用子表达式表示，则无需选中此选项。</p>
 						<hr/><h3>保存设置</h3>
 						<p><img alt="" src="assets/midi/midi-13.png"/></p>
 						<p>每次修改属性后，别忘了保存。</p>
