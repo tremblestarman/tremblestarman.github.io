@@ -130,13 +130,14 @@ new Schematic().ExportSchematic(b, new ExportSetting() { AlwaysActive = true, Al
 						<h3>禁用播放 & 开启计分板输出</h3>
 						<pre>a.EnableMidi(false, "D", "", -1, "PlaySound");
 a.EnableMidi(true, "D", "", -1, "Pitch");</pre>
-						<p>音轨"D"是我们为了输出计分板专门独立出的一条的音轨，上面两行即禁用其播放同时输出音高。</p>
+						<p>音轨"D"是我们为了计分板输出而专门设定的一条的音轨。<br/>（上面两行代码即禁用该音轨/playsound的同时输出音轨中键的音高。）</p>
 						<h3>计分板接口获取</h3>
-						<p>接下来我们可以进入Minecraft内查看留下来的接口。（从初始化命令中查看，即命令流最开头处）</p>
+						<p>接下来我们进入Minecraft内查看A2M留下的计分板接口。（可从命令流开头的初始化命令中查看，即下图最左侧）</p>
 						<p><img src="assets/demo2/1.png" alt="6"></p>
-						<p>计分板接口遵循以下命名规则：</p>
+						<p>计分板接口的命名规则如下：</p>
 						<ul>
-							<li><h4>计分板</h4></li>
+							<li><h4>计分板名</h4></li>
+							<p>计分板接口首先需要用于储存实体分数的计分板。</p>
 								<ul>
 								描述整体属性的计分板有以下几个：
 								<ul>
@@ -167,29 +168,31 @@ a.EnableMidi(true, "D", "", -1, "Pitch");</pre>
 										<li>Vol <code>采样振幅</code></li>
 									</ul>
 								</ul>
-							<li><h4>实体对象</h4></li>
-							<p>实体对象共有的标签为"AudioRiptideNode"。若按命名规则标签中出现了非大小写字母或下划线，该字符被替换为下划线。</p>
+							<li><h4>实体对象标签</h4></li>
+							<p>计分板接口还需要储存分数的实体对象。你可以通过实体标签选中它们。</p>
+							<p>实体对象的共有标签为<code>AudioRiptideNode</code>。</p>
 								<ul>
 								<li><h5>键信息</h5></li>
-								<p>储存键信息的实体有三个标签，分别为特有标签、音轨、乐器</p>
+								<p>储存键信息的实体有三个标签，分别是特有标签、音轨标签和乐器标签</p>
 									<ul>
 										<li>特有标签</li>
-										<code>track(5)_instrument(5)_index</code>
-										<p>取音轨的前五个字符、乐器的前五个字符与键的索引（按照出现顺序）</p>
-										<p>例如表示音轨"Track"，乐器"Instrument"，同时出现的第3个键：</p>
-										<code>Track_Instr_3</code>
-										<li>音轨</li>
-										<code>t_track</code>
-										<p>音轨名前加上"t_"即可。（空格被替换为下划线）</p>
-										<li>乐器</li>
-										<code>i_instrument</code>
-										<p>乐器名前加上"i_"即可。（空格被替换为下划线）</p>
+										<pre>[track](5)_[instrument](5)_[index]</pre>
+										<p>由<code>[track]</code>（音轨名）的前五个字符、<code>[instrument]</code>（乐器名）的前五个字符与<code>[index]</code>（键按照出现顺序的索引）组成</p>
+										<p>例如表示音轨名"Track"、乐器名"Instrument"、出现的第3个键，则特有标签如下：</p>
+										<pre>Track_Instr_3</pre>
+										<li>音轨标签</li>
+										<pre>t_[track]</pre>
+										<p><code>[track]</code>（音轨名）前加上"t_"即可。</p>
+										<li>乐器标签</li>
+										<pre>i_[instrument]</pre>
+										<p><code>[instrument]</code>（乐器名）前加上"i_"即可。</p>
 									</ul>
-								</ul>
 								<li><h5>波形</h5></li>
-								<p>储存波形信息的实体命名规则很简单：</p>
-								<code>wave_index_r/l</code>
-								<p>索引与采样数有关，后面的r或l代表右声道或左声道。</p>
+								<p>储存波形采样信息的实体命名规则很简单：</p>
+								<pre>wave_[index]_r 或 wave_[index]_rl</pre>
+								<p><code>[index]</code>（采样信息索引）与采样数有关，后面的r或l代表右声道或左声道。</p>
+								</ul>
+								<blockquote class="lead" style="font-size:15px;">为使实体标签合法，实体标签中出现的空格或其他特殊字符（包括汉字），将由下划线替代。</blockquote>
 						</ul>
 						<h3>结合Function</h3>
 						<pre>fill -20 6 17 -20 13 17 air 0 replace minecraft:stained_glass
@@ -200,7 +203,7 @@ execute @e[tag=wave0_l_0,score_Fre_min=72] ~ ~ ~ setblock -20 9 17 minecraft:sta
 execute @e[tag=wave0_l_0,score_Fre_min=90] ~ ~ ~ setblock -20 10 17 minecraft:stained_glass 14
 execute @e[tag=wave0_l_0,score_Fre_min=108] ~ ~ ~ setblock -20 11 17 minecraft:stained_glass 14
 execute @e[tag=wave0_l_0,score_Fre_min=126] ~ ~ ~ setblock -20 12 17 minecraft:stained_glass 14</pre>
-						<p>这是波形可视化中对频率的一段Function，基本方法就是遍历。通过对计分板接口的值遍历，达到可视化的效果。如果利用方块作为可视化对象，别忘了重置以更新。</p>
+						<p>这是对波形频率可视化的一段Function，基本思路就是穷举。通过对计分板接口的值进行遍历，穷举所有可能出现的事件，以实现可视化的效果。如果利用方块作为可视化对象，别忘了重置更新。</p>
 						<h3>工程效果</h3>
 						<p><img alt="" src="assets/icon/bilibili.png" style="height:20px; width:20px;"/> <a href="https://www.bilibili.com/video/av17558155">av17558155</a></p>
                     </div>

@@ -77,8 +77,67 @@
           <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-						<h1 class="page-header" style="text-align:center;">此页面尚未完成...</h1>
-						<p><a href="index.html">回到首页</a></p>
+						<h1 class="page-header" style="text-align:center;">Faded - AlanWalker</h1>
+						<div class="lead" style="text-align:center;">音频可视化 初见</div>
+						<h3>Midi设置</h3>
+						<p>这一步不再赘述了，前两个示例已经演示过了基本方法。对本项目我们使用soma资源包全钢琴音色输出：</p>
+						<p><img alt="" src="assets/demo/3/demo-1.png"/></p><hr/>
+						<h3>Wave设置</h3>
+						<p>制作波形可视化的第一步就是要对波形文件进行采样。</p>
+						<p><img alt="" src="assets/demo/3/demo-2.png"/></p>
+						<p>图中我们设定采样周期为4刻，频率采样数和振幅采样数都为10。</p>
+						<p>最终，采样所得的频率和振幅的值将会被输出到计分板上。</p><hr/>
+						<h3>导出</h3>
+						<p><img alt="" src="assets/demo/3/demo-3.png"/></p>
+						<p>同样，使用MCEdit导入schematic到存档并保存。图中可以看到，命令流的高度增加了不少。</p><hr/>
+						<h3>详解采样</h3>
+						<p>你可能会纳闷：采样究竟是一个怎样的过程？下面我将图解采样的步骤。</p>
+						<p>如图所示是一个波形文件的波形。</p>
+						<p><img alt="" src="assets/demo/3/sample-1.png" style="width:500px;"/></p>
+						<li>第一步：按照采样周期将波形切分为n段样本。(n表示<code>总刻数÷采样周期</code>)</li>
+						<p><img alt="" src="assets/demo/3/sample-2.png" style="width:500px;"/></p>
+						<li>第二步：按照采样数继续将样本切分为m段。(m表示<code>采样数</code>)</li>
+						<p><img alt="" src="assets/demo/3/sample-3.png" style="width:500px;"/></p>
+						<li>第三步：提取这m段中的信息，作为该段采样的信息。</li>
+						<p><img alt="" src="assets/demo/3/sample-4.png" style="height:200px;"/></p>
+						<p>采样所得的信息(频率和振幅)将以计分板形式输出。</p><hr/>
+						<h3>制作可视化</h3>
+						<p>可视化制作多用function命令穷举。</p>
+						<li class="h4">获取实体标签</li>
+						<p>你可以在初始化命令中找到对应实体的标签，也可以靠命名规则推测。如示例中启用了波形左声道，且采样数为10，则对应的实体标签为"wave_l_0"~"wave_l_9"。</p>
+						<li class="h4">穷举</li>
+						<p>手动穷举将是复杂且繁琐的，如果你会Excel或者编程，你将节省很多时间。例如在这里我要让波形的参数与粒子效果相关联，做到类似AfterEffect中粒子关联音频关键帧的特效，我使用了以下代码得到命令的穷举：</p>
+						<pre>for (var i = 0; i < 10; i++) //采样数穷举
+{
+    for (var j = 0; j <= 8; j++) //振幅范围穷举
+    {
+        for (var q = 0; q < 5; q++) //频率范围穷举
+        {
+            var m = "execute @e[tag=wave0_l_" + i + ",score_Fre_min=" + j * 5 + ",score_Fre=" + ((j == 8) ? (j + 10) * 5 : (j + 1) * 5 ) + ",score_Vol_min=" + q * 50 + ",score_Vol=" + ((q == 4) ? (q + 10) * 50 : (q + 1) * 50 ) + "] ~ ~ ~ execute @p ~" + Math.Round(Math.Cos(Math.PI * i / 9) * 5, 4) + " ~" +( -2 + (j - 3) * 0.8 ) + " ~" + Math.Round(Math.Sin(Math.PI * i / 9) * 5, 4) + " particle cloud ~ ~ ~ " + q * Math.Round(Math.Cos(2 * Math.PI * i / 9 - Math.PI / 2), 4) * 0.4 + " " + (j - 3) * 0.2 + " " + q * Math.Round(Math.Sin(2 * Math.PI * i / 9 - Math.PI / 2), 4) * 0.4 + " " + ( q + 1 ) * 0.25 + " 0";
+            var k = "execute @e[tag=wave0_l_" + i + ",score_Fre_min=" + j * 5 + ",score_Fre=" + ((j == 8) ? (j + 10) * 5 : (j + 1) * 5 ) + ",score_Vol_min=" + q * 50 + ",score_Vol=" + ((q == 4) ? (q + 10) * 50 : (q + 1) * 50 ) + "] ~ ~ ~ execute @p ~" + Math.Round(Math.Cos(Math.PI * i / 9) * 5, 4) + " ~" +( -2 + (j - 3) * 0.8 ) + " ~" + Math.Round(Math.Sin(Math.PI * i / 9) * 5, 4) + " particle endRod ~ ~ ~ 0 0 0 0.7 0";
+            Console.WriteLine(m);
+            Console.WriteLine(k);
+        }
+    }
+}</pre>
+						<p>最终得到了900条命令：</p>
+						<pre>execute @e[tag=wave0_l_0,score_Fre_min=0,score_Fre=5,score_Vol_min=0,score_Vol=50] ~ ~ ~ execute @p ~5 ~-4.4 ~0 particle cloud ~ ~ ~ 0 -0.6 0 0.25 0
+execute @e[tag=wave0_l_0,score_Fre_min=0,score_Fre=5,score_Vol_min=0,score_Vol=50] ~ ~ ~ execute @p ~5 ~-4.4 ~0 particle endRod ~ ~ ~ 0 0 0 0.7 0
+execute @e[tag=wave0_l_0,score_Fre_min=0,score_Fre=5,score_Vol_min=50,score_Vol=100] ~ ~ ~ execute @p ~5 ~-4.4 ~0 particle cloud ~ ~ ~ 0 -0.6 -0.4 0.5 0
+execute @e[tag=wave0_l_0,score_Fre_min=0,score_Fre=5,score_Vol_min=50,score_Vol=100] ~ ~ ~ execute @p ~5 ~-4.4 ~0 particle endRod ~ ~ ~ 0 0 0 0.7 0
+	...</pre>
+						<p>你可能认为900条命令同时执行会有些卡顿，但对于function来说这900条命令是完全可以流畅运行的。</p>
+						<li class="h4">执行</li>
+						<p>接下来我们进入游戏中，让可视化效果能成功显示出来。</p>
+						<p><img alt="" src="assets/demo/3/demo-4.png" style="width:500px;"/></p>
+						<p>首先放置一个保持激活的RCB，并使用function命令反复调用function文件。</p>
+						<p>在播放命令流前，别忘了执行初始化命令，否则可视化效果无法正常显示。</p>
+						<p><img alt="" src="assets/demo/3/demo-5.png" style="width:500px;"/></p>
+						<p>最终的可视化效果如上。(单图不能表现什么，需要下载工程亲自体会)</p>
+						<blockquote class="lead" style="font-size:20px;">不只是波形能实现可视化，Midi中键的各种信息也能输出到计分板用于可视化。</blockquote><hr/>
+						<h3>示例工程下载</h3>
+						<h4><a href="assets/demo/3/Faded.rar">Faded - AlanWalker</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/3/Faded.rar"></a> (Midi来源于网络)</h4>
+						<p>使用"相对路径"导入即可。播放需要使用soma资源包。别忘了放置保持激活的RCB持续调用function文件。</p>
                     </div>
                 </div>
           </div>
