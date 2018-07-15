@@ -78,45 +78,47 @@
           <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-						<h1 class="page-header" style="text-align:center;">U.N. Owen was Her? - ZUN</h1>
-						<div class="lead" style="text-align:center;">复杂Midi的快速生成</div>
-						<h3>导入Midi</h3>
-						<p><img alt="" src="assets/demo/2/demo-1.png"/></p>
-						<p>同上一个实例，选择Mid文件后，点击左下处"对勾"导入文件。</p>
-						<p><img alt="" src="assets/demo/2/demo-2.png"/></p>
-						<p>我们发现此Midi包含16个音轨，38种乐器，想要一一设置太耗费时间了。下图为Midi的预览：</p>
-						<p><img alt="" src="assets/demo/2/fl-studio.png" style="width:500px;"/></p>
-						<p>其实我们可以利用自动补全一键完成设定工作。</p><hr/>
-						<h3>自动补全</h3>
-						<p><img alt="" src="assets/demo/2/demo-3.png"/></p>
-						<p>找到右侧的"齿轮"，打开自动补全设置。</p>
-						<p><img alt="" src="assets/demo/2/demo-4.png"/></p>
-						<p>例如我们使用soma资源包制作红石音乐，选中"soma.json"的补全规则。</p>
-						<p><img alt="" src="assets/demo/2/demo-5.png"/></p>
-						<p>Midi中涉及到不少管弦乐器，我们使用"长音优先补全"模式，用于设定长音。</p>
-						<p><img alt="" src="assets/demo/2/demo-6.png"/></p>
-						<p>点击"对勾"确认。</p><hr/>
-						<h3>全局设置</h3>
-						<p><img alt="" src="assets/demo/2/demo-7.png"/></p>
-						<p>虽然补全了设置，但"Playsound输出"还没勾选。在全局设置中，我们勾选"Playsound输出"，然后点击右上角"对勾"确认，出现一个消息框提示我们是否确认修改，点击"确认"即可。</p>
-						<p><img alt="" src="assets/demo/2/demo-8.png"/></p>
-						<p>回到Midi设置中，所有项目的"Playsound输出"都被启用了，而且属性也都被自动补全了。</p>
-						<blockquote class="lead" style="font-size:20px;">通过全局设置和自动补全，原来需要几十分钟的事情仅靠两个操作便完成了。</blockquote><hr/>
-						<h3>导出工程&红石音乐</h3>
-						<p><img alt="" src="assets/demo/2/demo-9.png"/></p>
-						<p>来到导出设置，我们可以设置序列延伸方向、序列宽度、保持区块加载、保持实体加载、自动跟进与双声道，还可以修改BPM。如图，我将双声道设置为"面向X+方向"。</p>
-						<p><img alt="" src="assets/demo/2/demo-10.png"/></p>
-						<p>推荐保存工程，以方便修改。</p>
-						<p><img alt="" src="assets/demo/2/demo-11.png"/></p>
-						<p>同上一个实例，导出适用于MCEdit的schematic文件，并将其导入到存档中。</p>
-						<p><img alt="" src="assets/demo/2/demo-12.png"/></p>
-						<p>别忘了启用资源包。</p>
-						<p><img alt="" src="assets/demo/2/demo-13.png"/></p>
-						<p>Enjoy。</p>
-						<hr/>
+						<h1 class="page-header" style="text-align:center;">Bad Apple - NoteBlockStudio</h1>
+						<div class="lead" style="text-align:center;">对NBS的继承</div>
+						<h3>导入NBS文件</h3>
+						<p>首先需要<a href="https://www.stuffbydavid.com/dl/mcnbs-zip-321">NoteBlockStudio(3.2.1)</a>。</p>
+						<p><img alt="" src="assets/demo/5/demo-0.png"/></p>
+						<p>或者前往<a href="https://www.stuffbydavid.com/mcnbs">官网</a>下载。</p>
+						<p><img alt="" src="assets/demo/5/demo-1.png"/></p>
+						<p>打开NoteBlockStudio。</p>
+						<p><img alt="" src="assets/demo/5/demo-2.png"/></p>
+						<p>导入一个.nbs工程。</p>
+						<p><img alt="" src="assets/demo/5/demo-3.png"/></p>
+						<p>右上角的"Compatible"表示能完美适配于Minecraft，不过有无此标签对A2M来说无所谓。</p>
+						<p><img alt="" src="assets/demo/5/demo-3a.png"/></p>
+						<p>由于NBS(3.3.0+)移除了导出Midi的功能，我们需要下载3.2.1来完成后续操作。</p>
+						<p><img alt="" src="assets/demo/5/demo-4.png"/></p>
+						<p>点击"Export as MIDI"导出到Midi文件。</p>
+						<p><img alt="" src="assets/demo/5/demo-5.png"/></p>
+						<p>直接点击"Export"即可。</p><hr/>
+						<h3>标准化Midi</h3>
+						<p><img alt="" src="assets/demo/5/demo-6.png" style="width:500px;"/></p>
+						<p>有一点比较可惜的是，NBS导出的Midi并非标准格式，没有划分音轨。可以使用FlStudio等编曲软件导入Midi以自动划分音轨。</p>
+						<p><img alt="" src="assets/demo/5/demo-7.png"/></p>
+						<p>再导出Midi覆盖原Midi即可。</p><hr/>
+						<h3>A2M一键设置</h3>
+						<p><img alt="" src="assets/demo/5/demo-8.png"/></p>
+						<p><img alt="" src="assets/demo/5/demo-9.png"/></p>
+						<p><img alt="" src="assets/demo/5/demo-10.png"/></p>
+						<ul>
+							<li>第一步：自动补全-选中"minecraft.json"-选中"自动补全"模式-确认。</li>
+							<li>第二步：全局设置-勾选Playsound输出-保存。</li>
+							<li>第三步：回到Midi设置-按需调整。</li>
+						</ul>
+						<blockquote class="lead" style="font-size:15px;">例子中使用的是原版音符盒音色，你当然也可以使用其他音色。</blockquote><hr/>
+						<h3>导入MC</h3>
+						<p><img alt="" src="assets/demo/5/demo-11.png"/></p>
+						<p>导出schematic，再使用MCE导入既可。</p><hr/>
 						<h3>示例工程下载</h3>
-						<h4><a href="assets/demo/2/U.N. Owen was Her - ZUN.rar">U.N. Owen was Her - ZUN.rar</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/2/U.N. Owen was Her - ZUN.rar"></a></h4>
-						<p>使用"相对路径"导入即可。播放需要使用soma资源包。</p>
+						<h4><a href="assets/demo/5/Bad Apple.rar">Bad Apple - NBS</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/5/Bad Apple.rar"></a></h4>
+						<p>额外的示例项目：(泰拉瑞亚主题曲)</p>
+						<h4><a href="assets/demo/5/Terraria Theme.rar">Terraria Theme - NBS</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/5/Terraria Theme.rar"></a></h4>
+						<p>工程使用"相对路径"导入即可。使用原版音符盒音色，无需额外的资源包。</p>
                     </div>
                 </div>
           </div>
