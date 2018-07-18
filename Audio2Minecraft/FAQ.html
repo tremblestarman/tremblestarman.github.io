@@ -81,47 +81,38 @@
           <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-						<h1 class="page-header" style="text-align:center;">Bad Apple - NoteBlockStudio</h1>
-						<div class="lead" style="text-align:center;">对NBS的继承</div>
-						<h3>导入NBS文件</h3>
-						<p>首先需要<a href="https://www.stuffbydavid.com/dl/mcnbs-zip-321">NoteBlockStudio(3.2.1)</a>。</p>
-						<p><img alt="" src="assets/demo/5/demo-0.png"/></p>
-						<p>或者前往<a href="https://www.stuffbydavid.com/mcnbs">官网</a>下载。</p>
-						<p><img alt="" src="assets/demo/5/demo-1.png"/></p>
-						<p>打开NoteBlockStudio。</p>
-						<p><img alt="" src="assets/demo/5/demo-2.png"/></p>
-						<p>导入一个.nbs工程。</p>
-						<p><img alt="" src="assets/demo/5/demo-3.png"/></p>
-						<p>右上角的"Compatible"表示能完美适配于Minecraft，不过有无此标签对A2M来说无所谓。</p>
-						<p><img alt="" src="assets/demo/5/demo-3a.png"/></p>
-						<p>由于NBS(3.3.0+)移除了导出Midi的功能，我们需要下载3.2.1来完成后续操作。</p>
-						<p><img alt="" src="assets/demo/5/demo-4.png"/></p>
-						<p>点击"Export as MIDI"导出到Midi文件。</p>
-						<p><img alt="" src="assets/demo/5/demo-5.png"/></p>
-						<p>直接点击"Export"即可。</p><hr/>
-						<h3>标准化Midi</h3>
-						<p><img alt="" src="assets/demo/5/demo-6.png" style="width:500px;"/></p>
-						<p>有一点比较可惜的是，NBS导出的Midi并非标准格式，没有划分音轨。可以使用FlStudio等编曲软件导入Midi以自动划分音轨。</p>
-						<p><img alt="" src="assets/demo/5/demo-7.png"/></p>
-						<p>再导出Midi覆盖原Midi即可。</p><hr/>
-						<h3>A2M一键设置</h3>
-						<p><img alt="" src="assets/demo/5/demo-8.png"/></p>
-						<p><img alt="" src="assets/demo/5/demo-9.png"/></p>
-						<p><img alt="" src="assets/demo/5/demo-10.png"/></p>
+						<h1 class="page-header" style="text-align:center;">常见问题</h1>
+						<h3><div class="fa fa-fw fa-question"></div>如何播放命令流</h3>
+						<p>命令流按照导出设置中的"延伸方向"延伸。</p>
+						<p><img src="assets/question/play_0.png" style="width:500px;"></img></p>
+						<p><img src="assets/question/play_1.png"></img></p>
 						<ul>
-							<li>第一步：自动补全-选中"minecraft.json"-选中"自动补全"模式-确认。</li>
-							<li>第二步：全局设置-勾选Playsound输出-保存。</li>
-							<li>第三步：回到Midi设置-按需调整。</li>
+							<li>"初始化命令"包括计分板创建和实体创建，用于生成接口。</li>
+							<li>"重置命令"在命令流末端，用于销毁创建的接口。</li>
+							<li>"命令流开头"被激活即可播放。</li>
+						</ul><hr/>
+						<h3><div class="fa fa-fw fa-question"></div>没有Playsound命令</h3>
+						<p>可能你没有导入Mid文件。</p>
+						<p><img src="assets/question/no_playsound_0.png" style="width:500px;"></img></p>
+						<p>也有可能你没有勾选"Playsound输出"。</p>
+						<p><img src="assets/question/no_playsound_1.png"></img></p><hr/>
+						<h3><div class="fa fa-fw fa-question"></div>没有声音</h3>
+						<p>如果有Playsound命令却没有声音，极有可能是你未加载对应的资源包。</p>
+						<p><img src="assets/question/no_sound.png"></img></p><hr/>
+						<p>若仅使用原版音色，可以改用"minecraft.json"进行自动补全。或者填写原版音色并启用"音高输出"。</p><hr/>
+						<h3><div class="fa fa-fw fa-question"></div>乐器显示不全</h3>
+						<p>这是因为Midi中并没有划定音轨的命令，导致A2M无法正确读取信息。(如NBS导出的Midi)</p>
+						<p><img src="assets/question/instrument_bug.png" style="width:500px;"></img></p>
+						<p>一种解决方法是：将其导入至编曲软件(如FlStudio)以自动划分音轨，再导出并覆盖原文件。</p><hr/>
+						<h3><div class="fa fa-fw fa-question"></div>未响应 & 错误崩溃</h3>
+						<ul>
+							<li>导入文件过大占用内存</li>
+							<p>如果进程Audio2Minecraft.exe消耗资源量巨大，则是此原因造成的。可以等待其运行结束。</p>
+							<li>无法启动</li>
+							<p>检查.NET版本是否在4.5以上，否则安装版本在4.5以上的.NET Framework。</p>
+							<li>界面交互后 & 未知原因</li>
+							<p>在Github、论坛、贴吧向作者反馈问题，等待解答与修复。</p>
 						</ul>
-						<blockquote class="lead" style="font-size:15px;">例子中使用的是原版音符盒音色，你当然也可以使用其他音色。</blockquote><hr/>
-						<h3>导入MC</h3>
-						<p><img alt="" src="assets/demo/5/demo-11.png"/></p>
-						<p>导出schematic，再使用MCE导入。</p><hr/>
-						<h3>示例工程下载</h3>
-						<h4><a href="assets/demo/5/Bad Apple.rar">Bad Apple - NBS</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/5/Bad Apple.rar"></a></h4>
-						<p>额外的示例项目：(泰拉瑞亚主题曲)</p>
-						<h4><a href="assets/demo/5/Terraria Theme.rar">Terraria Theme - NBS</a><a class="fa fa-fw fa-arrow-down" href="assets/demo/5/Terraria Theme.rar"></a></h4>
-						<p>工程使用"相对路径"导入即可。使用原版音符盒音色，无需额外的资源包。</p>
                     </div>
                 </div>
           </div>
