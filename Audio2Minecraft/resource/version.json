@@ -1,5 +1,5 @@
 {
-	"version": "A-1.1",
+	"version": "Snap-A-1.2",
 	"download": "https://tremblestarman.github.io/Audio2Minecraft/download.html",
-	"log": "A-1.1\n1.1\u6b63\u5f0f\u7248\n- [a2mc]\u89e3\u51b3\u90e8\u5206\u64cd\u4f5c\u5047\u6b7b\u95ee\u9898\n- [a2mc]\u65b0\u589e\u7b49\u5f85\u52a8\u753b\n- [a2mc]\u540e\u53f0\u5f02\u6b65\u8fd0\u884c\n- [a2mc]ui\u7684.net\u7248\u672c\u964d\u81f34.5.0\n- [a2mc]dll(\u7248\u672c1.1)\u7684.net\u7248\u672c\u964d\u81f34.0.0\n- [dlls]fnbt\u5347\u7ea7\u81f3v0.6.4\n- [dlls]naduio\u5347\u7ea7\u81f3v1.8.4\n- [dlls]\u66f4\u65b0\u8bc1\u4e66"
+	"log": "Snap-A-1.2\n1.2\u7b2c\u4e00\u4e2a\u5feb\u7167\n[wait]\u7b49\u5f85\u52a8\u753b\u5c06\u4e0d\u4f1a\u5728\u4efb\u52a1\u680f\u663e\u793a\u56fe\u6807\n[uiin]\u5347\u7ea7ui\u7ec4\u4ef6\n[miau]\u52a0\u5165MineAudio\u6269\u5c55\u5e94\u7528\u7a0b\u5e8f\n[exts]\u652f\u6301extension\u6269\u5c55\u5185\u5bb9\n[mark]\u65b0\u589eexecutivemidi-midi\u6570\u636e\u8f6c\u547d\u4ee4\u6d41"
 }
