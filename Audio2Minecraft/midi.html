@@ -141,7 +141,20 @@
 						<p><code>Vibraphone - 12/12c, Tango Accordion - 19c, Distortion Guitar - 31/31c</code></p>
 						<li><h5>子表达式</h5></li>
 						<p>一段表达式，表达式中的某些字符可代表键的属性：</p>
-						<ul><li>%t <code>继承持续时间</code></li><li>%t[min..max] <code>继承持续时间，范围限定</code></li><li>%p <code>继承音高</code></li><li>%p[min..max] <code>继承音高，范围限定</code></li><li>%pt[CustomPitch.json] <code>继承自定义持续时间</code></li><li>%pc[CustomTickName.json] <code>继承自定义音高</code></li></ul>
+						<ul>
+						  <li>%t <code>继承持续刻数</code></li>
+						  <li>%t[min..max] <code>继承持续刻数，范围限定</code></li>
+						  <li>%tc[CustomTick.json] <code>继承自定义持续刻数</code></li>
+						  <li>%p <code>继承音高</code></li>
+						  <li>%p[min..max] <code>继承音高，范围限定</code></li>
+						  <li>%pc[CustomPitch.json] <code>继承自定义音高</code></li>
+						  <li>%v <code>继承力度</code></li>
+						  <li>%v[min..max] <code>继承力度，范围限定</code></li>
+						  <li>%vc[CustomVelocity.json] <code>继承自定义力度</code></li>
+						  <li>%bi <code>继承小节索引</code></li>
+						  <li>%bd <code>继承小节长度</code></li>
+						  <li>%ch <code>继承音轨</code></li>
+						</ul>
 						<p>例如</p>
 						<p><code>piano.p%pfff</code></p>
 						<p>上面的表达式用于RealPiano。如果某键的音高为72，实际得到的字符便是：</p>

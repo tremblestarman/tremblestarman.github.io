@@ -1,0 +1,136 @@
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ExecutiveMidi</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	<div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                       ExecutiveMidi
+                    </a>
+                </li>
+				<li class="dropdown">
+                  <li>
+                    <a href="index.html"><img src="../../assets/executive-midi.png" style="width:16px;margin-bottom:5px;"></img> 主页</a>
+				  </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-edit"></i> 表达式 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">ExecuteMidi的核心内容</li>
+                    <li><a href="cmd.html">命令</a></li>
+					<li><a href="param.html">参数</a></li>
+                    <li><a href="math.html">数学表达式</a></li>
+					<li><a href="comprehensive.html">表达式综合</a></li>
+					
+                  </ul>
+				</li>
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-paper-plane-o"></i> 项目示例 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header" style="text-align:center;">示例工程</li>
+					<li><a href="demo1.html">自由设置Midi</a></li>
+					<li><a href="demo2.html">瀑布流</a></li>
+                    <li><a href="demo3.html">极坐标</a></li>
+					<li><a href="export.html">导出</a></li>
+                  </ul>
+                </li>
+				<li>
+                    <a href="../../index.html"><img src="../../assets/icon.png" style="width:16px;margin-bottom:5px;"></img> Audio2Minecraft</a>
+                </li>
+				<li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+                </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+						<h1 class="page-header" style="text-align:center;">数学表达式</h1>
+						<h3>表达式函数</h3>
+						<p>以下参数同样适用于A2M中的"子表达式"。</p>
+						<ul>
+						  <li>%() <code>普通运算式</code></li>
+						  <li>%Pi <code>π</code></li>
+						  <li>%sin() <code>弧度制正弦</code></li>
+						  <li>%cos() <code>弧度制余弦</code></li>
+						  <li>%tan() <code>弧度制正切</code></li>
+						  <li>%sina() <code>角度制正弦</code></li>
+						  <li>%cosa() <code>角度制余弦</code></li>
+						  <li>%tana() <code>角度制正切</code></li>
+						  <li>%sinh() <code>双曲正弦</code></li>
+						  <li>%cosh() <code>双曲余弦</code></li>
+						  <li>%tanh() <code>双曲正切</code></li>
+						  <li>%abs() <code>绝对值</code></li>
+						  <li>%round() <code>舍入</code></li>
+						  <li>%sqrt() <code>开方</code></li>
+						</ul>
+						<h3>含有数学表达式的命令</h3>
+						<p><img src="assets/cmd/math-1.png"/></p>
+						<p>在"Clarinet"轨输入表达式：<pre>say %round(4.5)
+say %(%sina(30)+%cosa(60)*%sqrt(4))</pre></p>
+						<p><img src="assets/cmd/math-2.png"/></p>
+						<p>4.5舍入就是4</p>
+						<p>sina(30)=0.5,cosa(60)=0.5,sqrt(4)=2 => 0.5+0.5*2=1.5</p>
+						<blockquote>你可以在表达式中的任何地方嵌入数学表达式</blockquote>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+	
+	<script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		});
+	</script>
+</body>
+</html>
