@@ -7,6 +7,7 @@ var cy = window.innerHeight / 2;
 
 var theta = 0;
 var size = 1;
+var velocity = 1;
 function animate()
 {
     canvas.width = window.innerWidth;
@@ -26,7 +27,7 @@ function animate()
     clip_(theta, size);
     clip_arm(theta, size);
 
-    theta += 2;
+    theta += 2 * velocity;
     if (theta > 360) {
         theta = 0;
     }
@@ -157,6 +158,8 @@ canvas.onclick = function()
     /**/
     if (size < 3)
         size += 0.05;
+    if (velocity <= 10)
+    velocity += 0.1;
 }
 var clipping = false;
 function clipped()
