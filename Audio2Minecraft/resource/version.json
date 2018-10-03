@@ -1,5 +1,5 @@
 {
-	"version": "A-1.3-2",
+	"version": "Snap-A-1.4",
 	"download": "https://tremblestarman.github.io/Audio2Minecraft/download.html",
-	"log": "A-1.3-2\n- [a2mc]\u4fee\u590d\u65e0\u6cd5\u4ee5txt\u5f62\u5f0f\u5bfc\u51faMidi\u4fe1\u606f\u7684\u95ee\u9898"
+	"log": "Snap-A-1.4\n- [a2mc]\u652f\u63011.13\uff01%28\u4ec5\u9650WorldEdit\uff0c\u7531\u4e8eMCEdit\u5c1a\u672a\u66f4\u65b0%29\n- [dlls]dll\u7248\u672c\u6b63\u5f0f\u66f4\u65b0A-1.4"
 }
