@@ -1,5 +1,5 @@
 {
-	"version": "A-1.4",
+	"version": "A-1.4-1",
 	"download": "https://tremblestarman.github.io/Audio2Minecraft/download.html",
-	"log": "A-1.4 \u6b63\u5f0f\u7248\u53d1\u5e03\n- [a2mc]Midi\u4fe1\u606f(.xlsx)\u4e2d\u65b0\u589e\"\u5c0f\u8282\",\"\u62cd\",\"\u9891\u9053\""
+	"log": "A-1.4-1 \n- \u4fee\u590d\u65e0\u6cd5\u5bfc\u51fa\u7684Bug\n- Dll\u7248\u672c\u6b63\u5f0f\u66f4\u65b0A-1.4-1"
 }
