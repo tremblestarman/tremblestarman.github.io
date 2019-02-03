@@ -2,10 +2,10 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Block2Json</title>
-	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="favicon.ico">
     <style>
@@ -73,35 +73,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <h1 class="page-header" style="text-align:center;">实例 - MMD模型转Json模型</h1>  
-                        <blockquote class="lead">—— 互转示例</blockquote>
+                        <h1 class="page-header" style="text-align:center;">实例 - 体素模型转Json模型</h1>  
+                        <blockquote class="lead">—— 承接体素模型</blockquote>
 						<a name="blockinfo"></a><hr/>
-						<p>前面介绍了多面体模型能转化为体素模型。借助<strong>Blender</strong>，我们能将任意其他模型，包括MMD使用的.pmx和.pmd转化为.obj模型后，再以同样的方法转化为体素模型。</p>
+						<p>体素模型比Json更简化，与Schematic类似，借助<strong>kv6ToSchematic</strong>和<strong>Block2Json</strong>，将体素模型导入到Minecraft中。</p>
 						<hr/>
-                        <h3>准备工作</h3>
-						<img src="img/p/5/0.png" style="width: 300px"></img>
-                        <p>使用<strong>PMDEditor</strong>，对MMD模型的动作进行调整，并导出为.pmd模型。</p>
+                        <h3>Vox转Schematic</h3>
+						<img src="img/p/3/1.png" style="width: 300px"></img>
+                        <p>使用<strong>kv6ToSchematic</strong>，将一个体素模型转化为Schematic。</p>
+						<div><img src="img/p/3/2.png" style="width: 300px"></img></div>
+						<p>使用的样式可以自选，这里选择默认样式。</p>
+						<div><img src="img/p/3/3.png" style="width: 300px"></img></div>
+						<p>选择羊毛样式。</p>
+						<div><img src="img/p/3/4.png" style="width: 300px"></img></div>
+						<p>转化后的Schematic如下：</p>
+						<img src="img/p/3/5.png" style="width: 300px"></img>
 						<hr/>
-						<h3>Pmd/Pmx转Obj</h3>
-						<p>首先你需要<strong><a href="https://www.blender.org/">Blender</a></strong>，以及<strong><a href="https://github.com/sugiany/blender_mmd_tools">MMD导入插件</a></strong>。</p>
-						<p>将插件放在<code>Blender\x.xx\scripts\addons</code>中。</p>
-						<p>打开Blender，用<code>Ctrl + Alt + U</code>打开<strong>User Preferences</strong>检查该插件是否勾选。</p>
-						<div><img src="img/p/5/1.png" style="width: 550px"></img></div>
-						<p>然后你就可以导入.pmd和.pmx了。</p>
-						<div><img src="img/p/5/3.png" style="height: 300px"></img><img src="img/p/5/4.png" style="height: 300px"></img><img src="img/p/5/5.png" style="height: 300px"></img></div>
-						<p>在MMD工具栏中修改显示模式，改为<strong>GLSL</strong>，即可看到模型的材质。</p>
-						<div><img src="img/p/5/6.png" style="width: 300px"></img></div>
-						<p>最后在导出为.obj格式即可。</p>
+						<h3>Schematic转Json</h3>
+						<p>使用<strong>Block2Json</strong>，导入Minecraft后：</p>
+						<img src="img/p/3/6.png" style="width: 300px"></img>
 						<hr/>
-						<h3>Obj转Json</h3>
-						<div><img src="img/p/5/7.png" style="width: 300px"></img></div>
-						<p>在得到.obj文件后，按照<a href="vox2json.html">〖Obj转Json〗</a>的步骤继续。</p>
-						<hr/>
-						<h3>成品</h3>
-						<div><img src="img/p/5/8.png" style="width: 100px"></img></div>
-						<img src="img/p/5/9.png" style="width: 300px"></img>
-						<hr/>
-                        <p style="text-align:right"><a href="obj2json.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-left"></i></button></a> <a href="index.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-right"></i></button></a></p>
+                        <p style="text-align:right"><a href="quick_weapon.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-left"></i></button></a> <a href="obj2json.html"><button class="button button-primary button-box button-small switch"><i class="fa fa-angle-right"></i></button></a></p>
                     </div>
                 </div>
             </div>
@@ -111,8 +103,8 @@
     </div>
     <!-- /#wrapper -->
 	
-	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 		  var trigger = $('.hamburger'),
