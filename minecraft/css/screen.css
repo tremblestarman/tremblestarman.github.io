@@ -324,6 +324,9 @@ body, html, main {
 .cd-fixed-bg.cd-bg-6 {
  background-image: url("../images/background/1.6.png");
 }
+.cd-fixed-bg.cd-bg-7 {
+ background-image: url("../images/background/1.14.png");
+}
 
 .cd-scrolling-bg {
  min-height: 100%;
