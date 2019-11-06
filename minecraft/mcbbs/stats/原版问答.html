@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta name="viewport" content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <title>原版问答</title> 
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/marked.min.js"></script> 
+  <link rel="stylesheet" href="github-markdown.css" /> 
+  <style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+</style> 
+  <script>
+$(document).ready(function(){
+    $(function(){
+		$.ajax({
+			url: 'mds/原版问答.md',
+			dataType: 'text',
+			scriptCharset: 'utf-8',
+			success: function(data) {
+				document.getElementById('article').innerHTML = marked(data);
+			}
+		});
+	});
+});
+</script> 
+ </head> 
+ <body> 
+  <article id="article" class="markdown-body"></article>  
+ </body>
+</html>
