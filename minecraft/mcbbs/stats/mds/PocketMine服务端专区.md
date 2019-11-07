@@ -6,23 +6,23 @@
 
 - #### 被回复的帖子
 
-![被回复的帖子 / 未被回复的帖子](imgs/PocketMine服务端专区/74d0f04a-0109-11ea-9397-3c91807eb52c.png)
+![被回复的帖子 / 未被回复的帖子](imgs/PocketMine服务端专区/153cbd9a-0130-11ea-b4a0-3c91807eb52c.png)
 
 - #### 被评分的帖子
 
-![被评分的帖子 / 未被评分的帖子](imgs/PocketMine服务端专区/74e8747e-0109-11ea-b858-3c91807eb52c.png)
+![被评分的帖子 / 未被评分的帖子](imgs/PocketMine服务端专区/15553f1c-0130-11ea-a9af-3c91807eb52c.png)
 
 - #### 被关闭的帖子
 
-![被关闭的帖子 / 状态正常的帖子](imgs/PocketMine服务端专区/74fefb90-0109-11ea-9f18-3c91807eb52c.png)
+![被关闭的帖子 / 状态正常的帖子](imgs/PocketMine服务端专区/156f43c6-0130-11ea-8693-3c91807eb52c.png)
 
 - #### 查看与回帖
 
-![查看并回帖 / 查看无回帖](imgs/PocketMine服务端专区/75177b94-0109-11ea-bf46-3c91807eb52c.png)
+![查看并回帖 / 查看无回帖](imgs/PocketMine服务端专区/158c54cc-0130-11ea-b3a9-3c91807eb52c.png)
 
 - #### 有图章的帖子
 
-![有图章 / 无图章](imgs/PocketMine服务端专区/7549dad4-0109-11ea-8d55-3c91807eb52c.png)
+![有图章 / 无图章](imgs/PocketMine服务端专区/15b03ef8-0130-11ea-b457-3c91807eb52c.png)
 
 **（接下来的所有统计数据来源于访问有效的帖子，造成访问无效可能原因是帖子被删除、屏蔽、高权限隐藏等）**
 
@@ -30,79 +30,79 @@
 
 - #### 查看量
 
-![查看的分段统计](imgs/PocketMine服务端专区/75684a88-0109-11ea-94a1-3c91807eb52c.png)
+![查看的分段统计](imgs/PocketMine服务端专区/15cf9874-0130-11ea-a2f7-3c91807eb52c.png)
 
 - #### 回复量
 
-![回复的分段统计](imgs/PocketMine服务端专区/759334c8-0109-11ea-a4e0-3c91807eb52c.png)
+![回复的分段统计](imgs/PocketMine服务端专区/1601f79a-0130-11ea-ac85-3c91807eb52c.png)
 
 - #### 评分参与人数
 
-![参与人数的分段统计](imgs/PocketMine服务端专区/75bcc440-0109-11ea-a612-3c91807eb52c.png)
+![参与人数的分段统计](imgs/PocketMine服务端专区/16301552-0130-11ea-ba34-3c91807eb52c.png)
 
 - #### 人气
 
-![人气的分段统计](imgs/PocketMine服务端专区/75e2d08c-0109-11ea-a872-3c91807eb52c.png)
+![人气的分段统计](imgs/PocketMine服务端专区/165adb26-0130-11ea-b751-3c91807eb52c.png)
 
 - #### 金粒
 
-![金粒的分段统计](imgs/PocketMine服务端专区/760aeab8-0109-11ea-887b-3c91807eb52c.png)
+![金粒的分段统计](imgs/PocketMine服务端专区/1687e59c-0130-11ea-894e-3c91807eb52c.png)
 
 - #### 贡献
 
-![贡献的分段统计](imgs/PocketMine服务端专区/7631b918-0109-11ea-8df6-3c91807eb52c.png)
+![贡献的分段统计](imgs/PocketMine服务端专区/16c64bba-0130-11ea-8011-3c91807eb52c.png)
 
 - #### 金锭
 
-![金锭的分段统计](imgs/PocketMine服务端专区/76613464-0109-11ea-aefc-3c91807eb52c.png)
+![金锭的分段统计](imgs/PocketMine服务端专区/16fc9fd8-0130-11ea-9548-3c91807eb52c.png)
 
 - #### 绿宝石
 
-![绿宝石的分段统计](imgs/PocketMine服务端专区/768eb68a-0109-11ea-acba-3c91807eb52c.png)
+![绿宝石的分段统计](imgs/PocketMine服务端专区/17295c5a-0130-11ea-8a2a-3c91807eb52c.png)
 
 - #### 下界之星
 
-![下界之星的分段统计](imgs/PocketMine服务端专区/76b3ee40-0109-11ea-b944-3c91807eb52c.png)
+![下界之星的分段统计](imgs/PocketMine服务端专区/1754bb88-0130-11ea-bf9d-3c91807eb52c.png)
 
 - #### 爱心
 
-![爱心的分段统计](imgs/PocketMine服务端专区/76d7c874-0109-11ea-a9d7-3c91807eb52c.png)
+![爱心的分段统计](imgs/PocketMine服务端专区/177e9658-0130-11ea-9b18-3c91807eb52c.png)
 
 - #### 积分收益
 
-![收益的分段统计](imgs/PocketMine服务端专区/7708025e-0109-11ea-b12a-3c91807eb52c.png)
+![收益的分段统计](imgs/PocketMine服务端专区/17b4ea98-0130-11ea-8862-3c91807eb52c.png)
 
 - #### 好评度
 
-![好评度的分段统计](imgs/PocketMine服务端专区/772d11da-0109-11ea-9313-3c91807eb52c.png)
+![好评度的分段统计](imgs/PocketMine服务端专区/17e04b12-0130-11ea-ac49-3c91807eb52c.png)
 
 - #### 热度
 
-![热度的分段统计](imgs/PocketMine服务端专区/7752cf80-0109-11ea-9147-3c91807eb52c.png)
+![热度的分段统计](imgs/PocketMine服务端专区/180ae74c-0130-11ea-bd4f-3c91807eb52c.png)
 
 - #### 图片数
 
-![图片数的分段统计](imgs/PocketMine服务端专区/77761dda-0109-11ea-8ccb-3c91807eb52c.png)
+![图片数的分段统计](imgs/PocketMine服务端专区/18377cbe-0130-11ea-a684-3c91807eb52c.png)
 
 - #### iframe数
 
-![iframe数的分段统计](imgs/PocketMine服务端专区/779f4b6c-0109-11ea-9b56-3c91807eb52c.png)
+![iframe数的分段统计](imgs/PocketMine服务端专区/186157d2-0130-11ea-a44b-3c91807eb52c.png)
 
 - #### 表格数
 
-![表格数的分段统计](imgs/PocketMine服务端专区/77c0ed74-0109-11ea-98f3-3c91807eb52c.png)
+![表格数的分段统计](imgs/PocketMine服务端专区/18873b30-0130-11ea-bf71-3c91807eb52c.png)
 
 - #### 外链数
 
-![外链数的分段统计](imgs/PocketMine服务端专区/77e2dd54-0109-11ea-b9ae-3c91807eb52c.png)
+![外链数的分段统计](imgs/PocketMine服务端专区/18afde52-0130-11ea-a0bc-3c91807eb52c.png)
 
 - #### 帖子被操作次数
 
-![被操作数的分段统计](imgs/PocketMine服务端专区/78080276-0109-11ea-8058-3c91807eb52c.png)
+![被操作数的分段统计](imgs/PocketMine服务端专区/18da2ce4-0130-11ea-a8eb-3c91807eb52c.png)
 
 - #### 图章占比
 
-![图章占比](imgs/PocketMine服务端专区/7849fd1e-0109-11ea-b4d5-3c91807eb52c.png)
+![图章占比](imgs/PocketMine服务端专区/19255a30-0130-11ea-9fc6-3c91807eb52c.png)
 
 ----
 
@@ -1398,10 +1398,12 @@
 
 ----
 
-- ### 最活跃发帖者（逼榜 / 2bindex）
+- ## 逼榜 / 2bindex
+
+- ### 最活跃发帖者
 
 ```
-逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2
+逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2 + 其他发帖数 * 0.1
 ```
 
 排名 | 逼值 | 用户
@@ -1456,3 +1458,38 @@
 48 | 0.2 | zzx9720
 49 | 0.2 | uuuu1
 50 | 0.2 | sk200207
+
+- ### 最有价值发帖者
+
+```
+逼度 = (精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2) / 总发帖量
+```
+
+排名 | 逼度 | 用户
+-|-|-
+1 | 0.5 | y185110754
+2 | 0.5 | iSteven
+3 | 0.5 | 果酱布丁
+4 | 0.4 | ljyloo
+5 | 0.38 | RapDoodle
+6 | 0.34 | raysuperman
+7 | 0.3 | 小abczzz
+8 | 0.3 | KingSmile
+9 | 0.23 | zis
+10 | 0.2 | kewangboshi
+11 | 0.2 | liuhaitu
+12 | 0.2 | zzx9720
+13 | 0.2 | uuuu1
+14 | 0.18 | kv516
+15 | 0.17 | 1323471525
+16 | 0.17 | xbyg
+17 | 0.17 | 西瓜太郎
+18 | 0.14 | 1040400290
+19 | 0.12 | hsk001ufo
+20 | 0.12 | Snake1999
+21 | 0.11 | 忠义王子
+22 | 0.1 | 1292504237
+23 | 0.07 | 匿名
+24 | 0.05 | 18wyj2
+25 | 0.05 | 苦力怕的腐竹
+26 | 0.03 | 1104392414

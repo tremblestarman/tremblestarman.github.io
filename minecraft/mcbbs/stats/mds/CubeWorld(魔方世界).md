@@ -6,23 +6,23 @@
 
 - #### 被回复的帖子
 
-![被回复的帖子 / 未被回复的帖子](imgs/CubeWorld(魔方世界)/4c126a4c-0109-11ea-8f92-3c91807eb52c.png)
+![被回复的帖子 / 未被回复的帖子](imgs/CubeWorld(魔方世界)/e608fec6-012f-11ea-8958-3c91807eb52c.png)
 
 - #### 被评分的帖子
 
-![被评分的帖子 / 未被评分的帖子](imgs/CubeWorld(魔方世界)/4c27df58-0109-11ea-8e76-3c91807eb52c.png)
+![被评分的帖子 / 未被评分的帖子](imgs/CubeWorld(魔方世界)/e6224212-012f-11ea-b435-3c91807eb52c.png)
 
 - #### 被关闭的帖子
 
-![被关闭的帖子 / 状态正常的帖子](imgs/CubeWorld(魔方世界)/4c3c41fa-0109-11ea-aea8-3c91807eb52c.png)
+![被关闭的帖子 / 状态正常的帖子](imgs/CubeWorld(魔方世界)/e6396400-012f-11ea-bbb1-3c91807eb52c.png)
 
 - #### 查看与回帖
 
-![查看并回帖 / 查看无回帖](imgs/CubeWorld(魔方世界)/4c511cbe-0109-11ea-9026-3c91807eb52c.png)
+![查看并回帖 / 查看无回帖](imgs/CubeWorld(魔方世界)/e654a010-012f-11ea-99b7-3c91807eb52c.png)
 
 - #### 有图章的帖子
 
-![有图章 / 无图章](imgs/CubeWorld(魔方世界)/4c66de5e-0109-11ea-95e6-3c91807eb52c.png)
+![有图章 / 无图章](imgs/CubeWorld(魔方世界)/e66d4750-012f-11ea-981f-3c91807eb52c.png)
 
 **（接下来的所有统计数据来源于访问有效的帖子，造成访问无效可能原因是帖子被删除、屏蔽、高权限隐藏等）**
 
@@ -30,79 +30,79 @@
 
 - #### 查看量
 
-![查看的分段统计](imgs/CubeWorld(魔方世界)/4c82b90a-0109-11ea-836f-3c91807eb52c.png)
+![查看的分段统计](imgs/CubeWorld(魔方世界)/e68f5e10-012f-11ea-ba81-3c91807eb52c.png)
 
 - #### 回复量
 
-![回复的分段统计](imgs/CubeWorld(魔方世界)/4cc32b68-0109-11ea-9b85-3c91807eb52c.png)
+![回复的分段统计](imgs/CubeWorld(魔方世界)/e6d8b7de-012f-11ea-8359-3c91807eb52c.png)
 
 - #### 评分参与人数
 
-![参与人数的分段统计](imgs/CubeWorld(魔方世界)/4cf14bcc-0109-11ea-bd81-3c91807eb52c.png)
+![参与人数的分段统计](imgs/CubeWorld(魔方世界)/e70dd59c-012f-11ea-80d7-3c91807eb52c.png)
 
 - #### 人气
 
-![人气的分段统计](imgs/CubeWorld(魔方世界)/4d1a6592-0109-11ea-9a8a-3c91807eb52c.png)
+![人气的分段统计](imgs/CubeWorld(魔方世界)/e73ab91a-012f-11ea-b550-3c91807eb52c.png)
 
 - #### 金粒
 
-![金粒的分段统计](imgs/CubeWorld(魔方世界)/4d41cfd8-0109-11ea-98a6-3c91807eb52c.png)
+![金粒的分段统计](imgs/CubeWorld(魔方世界)/e7679f0c-012f-11ea-a311-3c91807eb52c.png)
 
 - #### 贡献
 
-![贡献的分段统计](imgs/CubeWorld(魔方世界)/4d691318-0109-11ea-a935-3c91807eb52c.png)
+![贡献的分段统计](imgs/CubeWorld(魔方世界)/e7939a3a-012f-11ea-ac74-3c91807eb52c.png)
 
 - #### 金锭
 
-![金锭的分段统计](imgs/CubeWorld(魔方世界)/4d8d4c8c-0109-11ea-b8b5-3c91807eb52c.png)
+![金锭的分段统计](imgs/CubeWorld(魔方世界)/e7bd993a-012f-11ea-a671-3c91807eb52c.png)
 
 - #### 绿宝石
 
-![绿宝石的分段统计](imgs/CubeWorld(魔方世界)/4db26ed2-0109-11ea-8782-3c91807eb52c.png)
+![绿宝石的分段统计](imgs/CubeWorld(魔方世界)/e7f599e8-012f-11ea-a1ab-3c91807eb52c.png)
 
 - #### 下界之星
 
-![下界之星的分段统计](imgs/CubeWorld(魔方世界)/4dd69388-0109-11ea-b3be-3c91807eb52c.png)
+![下界之星的分段统计](imgs/CubeWorld(魔方世界)/e82ab65c-012f-11ea-86d4-3c91807eb52c.png)
 
 - #### 爱心
 
-![爱心的分段统计](imgs/CubeWorld(魔方世界)/4e0748a2-0109-11ea-beca-3c91807eb52c.png)
+![爱心的分段统计](imgs/CubeWorld(魔方世界)/e855f15c-012f-11ea-9fc5-3c91807eb52c.png)
 
 - #### 积分收益
 
-![收益的分段统计](imgs/CubeWorld(魔方世界)/4e2fea8c-0109-11ea-ae76-3c91807eb52c.png)
+![收益的分段统计](imgs/CubeWorld(魔方世界)/e87ff1d8-012f-11ea-992c-3c91807eb52c.png)
 
 - #### 好评度
 
-![好评度的分段统计](imgs/CubeWorld(魔方世界)/4e58b364-0109-11ea-af40-3c91807eb52c.png)
+![好评度的分段统计](imgs/CubeWorld(魔方世界)/e8a9c9d4-012f-11ea-88c0-3c91807eb52c.png)
 
 - #### 热度
 
-![热度的分段统计](imgs/CubeWorld(魔方世界)/4e86af5e-0109-11ea-9fa3-3c91807eb52c.png)
+![热度的分段统计](imgs/CubeWorld(魔方世界)/e8df0e80-012f-11ea-add7-3c91807eb52c.png)
 
 - #### 图片数
 
-![图片数的分段统计](imgs/CubeWorld(魔方世界)/4ea9affa-0109-11ea-a955-3c91807eb52c.png)
+![图片数的分段统计](imgs/CubeWorld(魔方世界)/e9073b1c-012f-11ea-be9b-3c91807eb52c.png)
 
 - #### iframe数
 
-![iframe数的分段统计](imgs/CubeWorld(魔方世界)/4ecd00e8-0109-11ea-9ace-3c91807eb52c.png)
+![iframe数的分段统计](imgs/CubeWorld(魔方世界)/e931af9e-012f-11ea-b862-3c91807eb52c.png)
 
 - #### 表格数
 
-![表格数的分段统计](imgs/CubeWorld(魔方世界)/4ef19a30-0109-11ea-b760-3c91807eb52c.png)
+![表格数的分段统计](imgs/CubeWorld(魔方世界)/e95aa000-012f-11ea-8308-3c91807eb52c.png)
 
 - #### 外链数
 
-![外链数的分段统计](imgs/CubeWorld(魔方世界)/4f155d28-0109-11ea-8165-3c91807eb52c.png)
+![外链数的分段统计](imgs/CubeWorld(魔方世界)/e98516a6-012f-11ea-8de3-3c91807eb52c.png)
 
 - #### 帖子被操作次数
 
-![被操作数的分段统计](imgs/CubeWorld(魔方世界)/4f3b4124-0109-11ea-a57b-3c91807eb52c.png)
+![被操作数的分段统计](imgs/CubeWorld(魔方世界)/e9ae2d74-012f-11ea-a8c5-3c91807eb52c.png)
 
 - #### 图章占比
 
-![图章占比](imgs/CubeWorld(魔方世界)/4f7bdb9c-0109-11ea-ab53-3c91807eb52c.png)
+![图章占比](imgs/CubeWorld(魔方世界)/e9f7d64c-012f-11ea-901c-3c91807eb52c.png)
 
 ----
 
@@ -1346,10 +1346,12 @@
 
 ----
 
-- ### 最活跃发帖者（逼榜 / 2bindex）
+- ## 逼榜 / 2bindex
+
+- ### 最活跃发帖者
 
 ```
-逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2
+逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2 + 其他发帖数 * 0.1
 ```
 
 排名 | 逼值 | 用户
@@ -1404,3 +1406,15 @@
 48 | 0.1 | 游侠STW
 49 | 0.1 | JasonLye
 50 | 0.1 | apai991
+
+- ### 最有价值发帖者
+
+```
+逼度 = (精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2) / 总发帖量
+```
+
+排名 | 逼度 | 用户
+-|-|-
+1 | 0.5 | IceFreeze
+2 | 0.3 | 混乱
+3 | 0.3 | siiftun1857
