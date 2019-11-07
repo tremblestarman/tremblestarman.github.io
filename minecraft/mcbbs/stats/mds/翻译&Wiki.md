@@ -6,23 +6,23 @@
 
 - #### 被回复的帖子
 
-![被回复的帖子 / 未被回复的帖子](imgs/翻译&Wiki/b06cfb38-00a7-11ea-9bab-3c91807eb52c.png)
+![被回复的帖子 / 未被回复的帖子](imgs/翻译&Wiki/eea67052-0109-11ea-a8a9-3c91807eb52c.png)
 
 - #### 被评分的帖子
 
-![被评分的帖子 / 未被评分的帖子](imgs/翻译&Wiki/b08688b6-00a7-11ea-9a4a-3c91807eb52c.png)
+![被评分的帖子 / 未被评分的帖子](imgs/翻译&Wiki/eebafb8a-0109-11ea-a0bd-3c91807eb52c.png)
 
 - #### 被关闭的帖子
 
-![被关闭的帖子 / 状态正常的帖子](imgs/翻译&Wiki/b0a21c80-00a7-11ea-bced-3c91807eb52c.png)
+![被关闭的帖子 / 状态正常的帖子](imgs/翻译&Wiki/eed070c2-0109-11ea-88e2-3c91807eb52c.png)
 
 - #### 查看与回帖
 
-![查看并回帖 / 查看无回帖](imgs/翻译&Wiki/b0bba458-00a7-11ea-bb24-3c91807eb52c.png)
+![查看并回帖 / 查看无回帖](imgs/翻译&Wiki/eee681cc-0109-11ea-8a3f-3c91807eb52c.png)
 
 - #### 有图章的帖子
 
-![有图章 / 无图章](imgs/翻译&Wiki/b0d5abc2-00a7-11ea-be13-3c91807eb52c.png)
+![有图章 / 无图章](imgs/翻译&Wiki/eefbce8c-0109-11ea-9b15-3c91807eb52c.png)
 
 **（接下来的所有统计数据来源于访问有效的帖子，造成访问无效可能原因是帖子被删除、屏蔽、高权限隐藏等）**
 
@@ -30,79 +30,79 @@
 
 - #### 查看量
 
-![查看的分段统计](imgs/翻译&Wiki/b0fc1e70-00a7-11ea-8a74-3c91807eb52c.png)
+![查看的分段统计](imgs/翻译&Wiki/ef170ce2-0109-11ea-b026-3c91807eb52c.png)
 
 - #### 回复量
 
-![回复的分段统计](imgs/翻译&Wiki/b14887cc-00a7-11ea-b84d-3c91807eb52c.png)
+![回复的分段统计](imgs/翻译&Wiki/ef43ae92-0109-11ea-a4fb-3c91807eb52c.png)
 
 - #### 评分参与人数
 
-![参与人数的分段统计](imgs/翻译&Wiki/b1889f9a-00a7-11ea-8c57-3c91807eb52c.png)
+![参与人数的分段统计](imgs/翻译&Wiki/ef7cfbf4-0109-11ea-aabf-3c91807eb52c.png)
 
 - #### 人气
 
-![人气的分段统计](imgs/翻译&Wiki/b1c24c02-00a7-11ea-8700-3c91807eb52c.png)
+![人气的分段统计](imgs/翻译&Wiki/efb0e0a4-0109-11ea-85fa-3c91807eb52c.png)
 
 - #### 金粒
 
-![金粒的分段统计](imgs/翻译&Wiki/b1ef9918-00a7-11ea-a321-3c91807eb52c.png)
+![金粒的分段统计](imgs/翻译&Wiki/efdb1aac-0109-11ea-b196-3c91807eb52c.png)
 
 - #### 贡献
 
-![贡献的分段统计](imgs/翻译&Wiki/b21a5222-00a7-11ea-a1e5-3c91807eb52c.png)
+![贡献的分段统计](imgs/翻译&Wiki/f0024ee8-0109-11ea-bbc1-3c91807eb52c.png)
 
 - #### 金锭
 
-![金锭的分段统计](imgs/翻译&Wiki/b24e9770-00a7-11ea-9412-3c91807eb52c.png)
+![金锭的分段统计](imgs/翻译&Wiki/f02786c6-0109-11ea-a55f-3c91807eb52c.png)
 
 - #### 绿宝石
 
-![绿宝石的分段统计](imgs/翻译&Wiki/b29aec82-00a7-11ea-be00-3c91807eb52c.png)
+![绿宝石的分段统计](imgs/翻译&Wiki/f04c2386-0109-11ea-bb16-3c91807eb52c.png)
 
 - #### 下界之星
 
-![下界之星的分段统计](imgs/翻译&Wiki/b2cd6386-00a7-11ea-896d-3c91807eb52c.png)
+![下界之星的分段统计](imgs/翻译&Wiki/f070a576-0109-11ea-85c3-3c91807eb52c.png)
 
 - #### 爱心
 
-![爱心的分段统计](imgs/翻译&Wiki/b2fb298c-00a7-11ea-b20c-3c91807eb52c.png)
+![爱心的分段统计](imgs/翻译&Wiki/f0a35286-0109-11ea-b1de-3c91807eb52c.png)
 
 - #### 积分收益
 
-![收益的分段统计](imgs/翻译&Wiki/b3254c94-00a7-11ea-84f3-3c91807eb52c.png)
+![收益的分段统计](imgs/翻译&Wiki/f0ccb768-0109-11ea-b7cb-3c91807eb52c.png)
 
 - #### 好评度
 
-![好评度的分段统计](imgs/翻译&Wiki/b3518cc6-00a7-11ea-a140-3c91807eb52c.png)
+![好评度的分段统计](imgs/翻译&Wiki/f0f372a2-0109-11ea-833f-3c91807eb52c.png)
 
 - #### 热度
 
-![热度的分段统计](imgs/翻译&Wiki/b37beb24-00a7-11ea-8459-3c91807eb52c.png)
+![热度的分段统计](imgs/翻译&Wiki/f1181e26-0109-11ea-b535-3c91807eb52c.png)
 
 - #### 图片数
 
-![图片数的分段统计](imgs/翻译&Wiki/b3a92382-00a7-11ea-9acb-3c91807eb52c.png)
+![图片数的分段统计](imgs/翻译&Wiki/f13be2ec-0109-11ea-bc67-3c91807eb52c.png)
 
 - #### iframe数
 
-![iframe数的分段统计](imgs/翻译&Wiki/b3de8a40-00a7-11ea-bd24-3c91807eb52c.png)
+![iframe数的分段统计](imgs/翻译&Wiki/f169b150-0109-11ea-a1c8-3c91807eb52c.png)
 
 - #### 表格数
 
-![表格数的分段统计](imgs/翻译&Wiki/b40c2746-00a7-11ea-b25b-3c91807eb52c.png)
+![表格数的分段统计](imgs/翻译&Wiki/f18e84f8-0109-11ea-9fd8-3c91807eb52c.png)
 
 - #### 外链数
 
-![外链数的分段统计](imgs/翻译&Wiki/b4355992-00a7-11ea-bb9d-3c91807eb52c.png)
+![外链数的分段统计](imgs/翻译&Wiki/f1b1fa78-0109-11ea-8c40-3c91807eb52c.png)
 
 - #### 帖子被操作次数
 
-![被操作数的分段统计](imgs/翻译&Wiki/b45f91da-00a7-11ea-9bba-3c91807eb52c.png)
+![被操作数的分段统计](imgs/翻译&Wiki/f1d5f874-0109-11ea-bd9b-3c91807eb52c.png)
 
 - #### 图章占比
 
-![图章占比](imgs/翻译&Wiki/b4a9301a-00a7-11ea-b3d9-3c91807eb52c.png)
+![图章占比](imgs/翻译&Wiki/f216f5dc-0109-11ea-84b3-3c91807eb52c.png)
 
 ----
 
@@ -1710,3 +1710,64 @@
 17 | 1 | HAYO Plugin
 18 | 1 | Magic Amateur Group
 19 | 1 | SuperKripts
+
+----
+
+- ### 最活跃发帖者（逼榜 / 2bindex）
+
+```
+逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2
+```
+
+排名 | 逼值 | 用户
+-|-|-
+1 | 12.2 | cc7w
+2 | 8.9 | DJXGAME
+3 | 8.1 | 海螺螺
+4 | 7.9 | sjjklh
+5 | 6.9 | V.M.Samlye
+6 | 5.4 | longlongz
+7 | 4.9 | LocusAzzurro
+8 | 4.7 | qsefthuopq
+9 | 4.6 | 土球球
+10 | 4.5 | BensonQC
+11 | 3.4 | Pixelman
+12 | 3.3 | Smokey_Days
+13 | 2.7 | 乙烯_中国
+14 | 2.7 | 广药
+15 | 2.4 | jianghr
+16 | 2.1 | 白羊羊
+17 | 2.0 | LHanson
+18 | 1.7 | 混乱
+19 | 1.7 | ff98sha
+20 | 1.7 | 童鞋鞋
+21 | 1.6 | 森林蝙蝠
+22 | 1.5 | Tollainmear
+23 | 1.4 | SYS_TEM
+24 | 1.3 | 猜猜谁是谁
+25 | 1.3 | SPGoding
+26 | 1.2 | C-青皮君
+27 | 1.1 | zyd232
+28 | 1.1 | EntityParrot_
+29 | 1.1 | Azitate
+30 | 1.0 | eisenwater
+31 | 1.0 | DeckerCHAN
+32 | 1.0 | MosQua
+33 | 1.0 | z25096708
+34 | 1.0 | KTR
+35 | 1.0 | PlayerMingZhu
+36 | 1.0 | Astronomer
+37 | 1.0 | GiNYAi
+38 | 1.0 | baizuo
+39 | 1.0 | zyjking
+40 | 0.9 | God
+41 | 0.9 | 孤独秋叶
+42 | 0.9 | a1294790523
+43 | 0.8 | runes405
+44 | 0.8 | fortomxq
+45 | 0.8 | WarbleOrigin
+46 | 0.7 | miguo
+47 | 0.7 | hzy980512
+48 | 0.7 | taxidaip
+49 | 0.7 | 秋风残叶
+50 | 0.6 | 黄凯航

@@ -6,23 +6,23 @@
 
 - #### 被回复的帖子
 
-![被回复的帖子 / 未被回复的帖子](imgs/MCBBS擂台/df11495c-00a5-11ea-a65f-3c91807eb52c.png)
+![被回复的帖子 / 未被回复的帖子](imgs/MCBBS擂台/590564a2-0109-11ea-be58-3c91807eb52c.png)
 
 - #### 被评分的帖子
 
-![被评分的帖子 / 未被评分的帖子](imgs/MCBBS擂台/dfa17e6c-00a5-11ea-ab2b-3c91807eb52c.png)
+![被评分的帖子 / 未被评分的帖子](imgs/MCBBS擂台/591aecd8-0109-11ea-9009-3c91807eb52c.png)
 
 - #### 被关闭的帖子
 
-![被关闭的帖子 / 状态正常的帖子](imgs/MCBBS擂台/e0297f8c-00a5-11ea-9d37-3c91807eb52c.png)
+![被关闭的帖子 / 状态正常的帖子](imgs/MCBBS擂台/593283a8-0109-11ea-9fbe-3c91807eb52c.png)
 
 - #### 查看与回帖
 
-![查看并回帖 / 查看无回帖](imgs/MCBBS擂台/e0852380-00a5-11ea-9a47-3c91807eb52c.png)
+![查看并回帖 / 查看无回帖](imgs/MCBBS擂台/5947aaee-0109-11ea-979c-3c91807eb52c.png)
 
 - #### 有图章的帖子
 
-![有图章 / 无图章](imgs/MCBBS擂台/e0db83c0-00a5-11ea-880a-3c91807eb52c.png)
+![有图章 / 无图章](imgs/MCBBS擂台/595c5cf8-0109-11ea-9a83-3c91807eb52c.png)
 
 **（接下来的所有统计数据来源于访问有效的帖子，造成访问无效可能原因是帖子被删除、屏蔽、高权限隐藏等）**
 
@@ -30,79 +30,79 @@
 
 - #### 查看量
 
-![查看的分段统计](imgs/MCBBS擂台/e1582752-00a5-11ea-b0ac-3c91807eb52c.png)
+![查看的分段统计](imgs/MCBBS擂台/597810a2-0109-11ea-b300-3c91807eb52c.png)
 
 - #### 回复量
 
-![回复的分段统计](imgs/MCBBS擂台/e22a79e4-00a5-11ea-aa7e-3c91807eb52c.png)
+![回复的分段统计](imgs/MCBBS擂台/59a433f0-0109-11ea-b150-3c91807eb52c.png)
 
 - #### 评分参与人数
 
-![参与人数的分段统计](imgs/MCBBS擂台/e2e7beca-00a5-11ea-846f-3c91807eb52c.png)
+![参与人数的分段统计](imgs/MCBBS擂台/59de588c-0109-11ea-9c39-3c91807eb52c.png)
 
 - #### 人气
 
-![人气的分段统计](imgs/MCBBS擂台/e389358a-00a5-11ea-8e8f-3c91807eb52c.png)
+![人气的分段统计](imgs/MCBBS擂台/5a085aa2-0109-11ea-8cc7-3c91807eb52c.png)
 
 - #### 金粒
 
-![金粒的分段统计](imgs/MCBBS擂台/e4202740-00a5-11ea-9061-3c91807eb52c.png)
+![金粒的分段统计](imgs/MCBBS擂台/5a3259be-0109-11ea-9ebe-3c91807eb52c.png)
 
 - #### 贡献
 
-![贡献的分段统计](imgs/MCBBS擂台/e4b5e2f0-00a5-11ea-8034-3c91807eb52c.png)
+![贡献的分段统计](imgs/MCBBS擂台/5a60c410-0109-11ea-9d72-3c91807eb52c.png)
 
 - #### 金锭
 
-![金锭的分段统计](imgs/MCBBS擂台/e53eac22-00a5-11ea-88aa-3c91807eb52c.png)
+![金锭的分段统计](imgs/MCBBS擂台/5a86cfa4-0109-11ea-a9cf-3c91807eb52c.png)
 
 - #### 绿宝石
 
-![绿宝石的分段统计](imgs/MCBBS擂台/e5e4a9fa-00a5-11ea-b31a-3c91807eb52c.png)
+![绿宝石的分段统计](imgs/MCBBS擂台/5aab6b06-0109-11ea-96b4-3c91807eb52c.png)
 
 - #### 下界之星
 
-![下界之星的分段统计](imgs/MCBBS擂台/e6745610-00a5-11ea-93f2-3c91807eb52c.png)
+![下界之星的分段统计](imgs/MCBBS擂台/5ad1277e-0109-11ea-9dcf-3c91807eb52c.png)
 
 - #### 爱心
 
-![爱心的分段统计](imgs/MCBBS擂台/e70ed13e-00a5-11ea-a23a-3c91807eb52c.png)
+![爱心的分段统计](imgs/MCBBS擂台/5b02bf02-0109-11ea-a629-3c91807eb52c.png)
 
 - #### 积分收益
 
-![收益的分段统计](imgs/MCBBS擂台/e7aa248a-00a5-11ea-b0b2-3c91807eb52c.png)
+![收益的分段统计](imgs/MCBBS擂台/5b2c24e6-0109-11ea-95b4-3c91807eb52c.png)
 
 - #### 好评度
 
-![好评度的分段统计](imgs/MCBBS擂台/e8388dae-00a5-11ea-bbe7-3c91807eb52c.png)
+![好评度的分段统计](imgs/MCBBS擂台/5b549e98-0109-11ea-8896-3c91807eb52c.png)
 
 - #### 热度
 
-![热度的分段统计](imgs/MCBBS擂台/e8c7085a-00a5-11ea-8793-3c91807eb52c.png)
+![热度的分段统计](imgs/MCBBS擂台/5b785194-0109-11ea-bee1-3c91807eb52c.png)
 
 - #### 图片数
 
-![图片数的分段统计](imgs/MCBBS擂台/e94c7d80-00a5-11ea-8c15-3c91807eb52c.png)
+![图片数的分段统计](imgs/MCBBS擂台/5b9bc6de-0109-11ea-bb28-3c91807eb52c.png)
 
 - #### iframe数
 
-![iframe数的分段统计](imgs/MCBBS擂台/e9e70306-00a5-11ea-b31d-3c91807eb52c.png)
+![iframe数的分段统计](imgs/MCBBS擂台/5bbe795e-0109-11ea-88ec-3c91807eb52c.png)
 
 - #### 表格数
 
-![表格数的分段统计](imgs/MCBBS擂台/ea7a1876-00a5-11ea-bcf8-3c91807eb52c.png)
+![表格数的分段统计](imgs/MCBBS擂台/5be4bfde-0109-11ea-a6ba-3c91807eb52c.png)
 
 - #### 外链数
 
-![外链数的分段统计](imgs/MCBBS擂台/eb02a4dc-00a5-11ea-82bf-3c91807eb52c.png)
+![外链数的分段统计](imgs/MCBBS擂台/5c13ed0a-0109-11ea-8db4-3c91807eb52c.png)
 
 - #### 帖子被操作次数
 
-![被操作数的分段统计](imgs/MCBBS擂台/eb93875e-00a5-11ea-bba5-3c91807eb52c.png)
+![被操作数的分段统计](imgs/MCBBS擂台/5c37b936-0109-11ea-92b5-3c91807eb52c.png)
 
 - #### 图章占比
 
-![图章占比](imgs/MCBBS擂台/ec934f24-00a5-11ea-bb6c-3c91807eb52c.png)
+![图章占比](imgs/MCBBS擂台/5c70df64-0109-11ea-87ea-3c91807eb52c.png)
 
 ----
 
@@ -1612,3 +1612,64 @@
 18 | 1 | Kooky Dollar 工作室
 19 | 1 | 火星地带
 20 | 1 | 世界百科建筑组
+
+----
+
+- ### 最活跃发帖者（逼榜 / 2bindex）
+
+```
+逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2
+```
+
+排名 | 逼值 | 用户
+-|-|-
+1 | 5.2 | 紫枫
+2 | 5.1 | Forever_小树
+3 | 3.1 | 混乱
+4 | 2.9 | 匿名
+5 | 2.3 | likeliang
+6 | 2.2 | 血君
+7 | 2.1 | jzys
+8 | 2.1 | LocusAzzurro
+9 | 2.0 | sabo970
+10 | 2.0 | 1523464360
+11 | 2.0 | 青春。祭
+12 | 1.2 | 面包bread
+13 | 1.2 | Yinyu
+14 | 1.1 | Tobychui
+15 | 1.1 | Forsworn_
+16 | 1.1 | wa66rpg
+17 | 1.1 | Tzi君
+18 | 1.1 | 单机建筑师
+19 | 1.1 | kongbaiyo
+20 | 1.1 | 暗夜Elen
+21 | 1.1 | 我好牛b
+22 | 1.1 | axjza
+23 | 1.1 | Seahelms
+24 | 1.0 | Sky、果冻
+25 | 1.0 | 小小王
+26 | 1.0 | 59967115
+27 | 1.0 | zxg123
+28 | 1.0 | 953301477
+29 | 1.0 | 雷霆※无双
+30 | 1.0 | aa463686189
+31 | 1.0 | edu021080
+32 | 1.0 | 橘子菌
+33 | 1.0 | 路肯
+34 | 1.0 | 筒子
+35 | 1.0 | leno1987
+36 | 1.0 | rukbat
+37 | 1.0 | MsYqgzt
+38 | 1.0 | G_LGlet
+39 | 1.0 | lishanglin
+40 | 1.0 | 武月天【】
+41 | 1.0 | Yy星人
+42 | 1.0 | smallord
+43 | 1.0 | 名人堂123
+44 | 1.0 | =Rick
+45 | 1.0 | 乙烯_中国
+46 | 1.0 | 镜钥钥
+47 | 1.0 | Cato_小人
+48 | 1.0 | Bean_Curd
+49 | 1.0 | 几何
+50 | 0.6 | Exodus

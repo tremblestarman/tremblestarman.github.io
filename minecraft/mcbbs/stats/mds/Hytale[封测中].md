@@ -6,23 +6,23 @@
 
 - #### 被回复的帖子
 
-![被回复的帖子 / 未被回复的帖子](imgs/Hytale[封测中]/bcf2f536-00a5-11ea-94bb-3c91807eb52c.png)
+![被回复的帖子 / 未被回复的帖子](imgs/Hytale[封测中]/5067d3d8-0109-11ea-97cc-3c91807eb52c.png)
 
 - #### 被评分的帖子
 
-![被评分的帖子 / 未被评分的帖子](imgs/Hytale[封测中]/bd582dda-00a5-11ea-a0cf-3c91807eb52c.png)
+![被评分的帖子 / 未被评分的帖子](imgs/Hytale[封测中]/507d8540-0109-11ea-a8fa-3c91807eb52c.png)
 
 - #### 被关闭的帖子
 
-![被关闭的帖子 / 状态正常的帖子](imgs/Hytale[封测中]/bdd6a700-00a5-11ea-96b5-3c91807eb52c.png)
+![被关闭的帖子 / 状态正常的帖子](imgs/Hytale[封测中]/5094578c-0109-11ea-9c90-3c91807eb52c.png)
 
 - #### 查看与回帖
 
-![查看并回帖 / 查看无回帖](imgs/Hytale[封测中]/be377c76-00a5-11ea-b0a6-3c91807eb52c.png)
+![查看并回帖 / 查看无回帖](imgs/Hytale[封测中]/50aa1a9c-0109-11ea-ba7e-3c91807eb52c.png)
 
 - #### 有图章的帖子
 
-![有图章 / 无图章](imgs/Hytale[封测中]/be956746-00a5-11ea-bbac-3c91807eb52c.png)
+![有图章 / 无图章](imgs/Hytale[封测中]/50d3b908-0109-11ea-a5d4-3c91807eb52c.png)
 
 **（接下来的所有统计数据来源于访问有效的帖子，造成访问无效可能原因是帖子被删除、屏蔽、高权限隐藏等）**
 
@@ -30,79 +30,79 @@
 
 - #### 查看量
 
-![查看的分段统计](imgs/Hytale[封测中]/bf056f0a-00a5-11ea-b71b-3c91807eb52c.png)
+![查看的分段统计](imgs/Hytale[封测中]/50f4e606-0109-11ea-9027-3c91807eb52c.png)
 
 - #### 回复量
 
-![回复的分段统计](imgs/Hytale[封测中]/bfe969b6-00a5-11ea-98b6-3c91807eb52c.png)
+![回复的分段统计](imgs/Hytale[封测中]/5122db6c-0109-11ea-974c-3c91807eb52c.png)
 
 - #### 评分参与人数
 
-![参与人数的分段统计](imgs/Hytale[封测中]/c08d2228-00a5-11ea-ab9d-3c91807eb52c.png)
+![参与人数的分段统计](imgs/Hytale[封测中]/514d29c6-0109-11ea-a14d-3c91807eb52c.png)
 
 - #### 人气
 
-![人气的分段统计](imgs/Hytale[封测中]/c1437ab6-00a5-11ea-a98c-3c91807eb52c.png)
+![人气的分段统计](imgs/Hytale[封测中]/51729af4-0109-11ea-8c9b-3c91807eb52c.png)
 
 - #### 金粒
 
-![金粒的分段统计](imgs/Hytale[封测中]/c1d1d24c-00a5-11ea-9285-3c91807eb52c.png)
+![金粒的分段统计](imgs/Hytale[封测中]/519c74b6-0109-11ea-9d1a-3c91807eb52c.png)
 
 - #### 贡献
 
-![贡献的分段统计](imgs/Hytale[封测中]/c27136a8-00a5-11ea-829d-3c91807eb52c.png)
+![贡献的分段统计](imgs/Hytale[封测中]/51c2d0e4-0109-11ea-ae6f-3c91807eb52c.png)
 
 - #### 金锭
 
-![金锭的分段统计](imgs/Hytale[封测中]/c30209e4-00a5-11ea-9664-3c91807eb52c.png)
+![金锭的分段统计](imgs/Hytale[封测中]/51e683e8-0109-11ea-aa0c-3c91807eb52c.png)
 
 - #### 绿宝石
 
-![绿宝石的分段统计](imgs/Hytale[封测中]/c39815e8-00a5-11ea-a0d8-3c91807eb52c.png)
+![绿宝石的分段统计](imgs/Hytale[封测中]/521845b8-0109-11ea-9993-3c91807eb52c.png)
 
 - #### 下界之星
 
-![下界之星的分段统计](imgs/Hytale[封测中]/c43c5b08-00a5-11ea-a62a-3c91807eb52c.png)
+![下界之星的分段统计](imgs/Hytale[封测中]/5241aa4c-0109-11ea-af79-3c91807eb52c.png)
 
 - #### 爱心
 
-![爱心的分段统计](imgs/Hytale[封测中]/c4e824e8-00a5-11ea-bebb-3c91807eb52c.png)
+![爱心的分段统计](imgs/Hytale[封测中]/5267f5a8-0109-11ea-b34d-3c91807eb52c.png)
 
 - #### 积分收益
 
-![收益的分段统计](imgs/Hytale[封测中]/c5785fb6-00a5-11ea-bce9-3c91807eb52c.png)
+![收益的分段统计](imgs/Hytale[封测中]/52989a5c-0109-11ea-a318-3c91807eb52c.png)
 
 - #### 好评度
 
-![好评度的分段统计](imgs/Hytale[封测中]/c60e22c8-00a5-11ea-876b-3c91807eb52c.png)
+![好评度的分段统计](imgs/Hytale[封测中]/52bea62e-0109-11ea-8ba7-3c91807eb52c.png)
 
 - #### 热度
 
-![热度的分段统计](imgs/Hytale[封测中]/c6b58348-00a5-11ea-af50-3c91807eb52c.png)
+![热度的分段统计](imgs/Hytale[封测中]/52e10ac2-0109-11ea-8e0c-3c91807eb52c.png)
 
 - #### 图片数
 
-![图片数的分段统计](imgs/Hytale[封测中]/c73d8f9a-00a5-11ea-9659-3c91807eb52c.png)
+![图片数的分段统计](imgs/Hytale[封测中]/5305b7c8-0109-11ea-87c9-3c91807eb52c.png)
 
 - #### iframe数
 
-![iframe数的分段统计](imgs/Hytale[封测中]/c7e29f24-00a5-11ea-89ed-3c91807eb52c.png)
+![iframe数的分段统计](imgs/Hytale[封测中]/5326e4ae-0109-11ea-8fef-3c91807eb52c.png)
 
 - #### 表格数
 
-![表格数的分段统计](imgs/Hytale[封测中]/c8798006-00a5-11ea-9b6f-3c91807eb52c.png)
+![表格数的分段统计](imgs/Hytale[封测中]/5349fbb4-0109-11ea-a544-3c91807eb52c.png)
 
 - #### 外链数
 
-![外链数的分段统计](imgs/Hytale[封测中]/c90f1b92-00a5-11ea-b2f7-3c91807eb52c.png)
+![外链数的分段统计](imgs/Hytale[封测中]/536ef6f0-0109-11ea-9f79-3c91807eb52c.png)
 
 - #### 帖子被操作次数
 
-![被操作数的分段统计](imgs/Hytale[封测中]/c9ad8022-00a5-11ea-b72e-3c91807eb52c.png)
+![被操作数的分段统计](imgs/Hytale[封测中]/53947cb6-0109-11ea-9ac8-3c91807eb52c.png)
 
 - #### 图章占比
 
-![图章占比](imgs/Hytale[封测中]/ca9fd8c0-00a5-11ea-8fd1-3c91807eb52c.png)
+![图章占比](imgs/Hytale[封测中]/53d6525e-0109-11ea-97bd-3c91807eb52c.png)
 
 ----
 
@@ -653,3 +653,24 @@
 排名 | 数量 | 发帖来自小组
 -|-|-
 1 | 1 | LoongWork筑龙
+
+----
+
+- ### 最活跃发帖者（逼榜 / 2bindex）
+
+```
+逼值 = 精华帖数 + (优秀帖数 + 版主推荐帖数) * 0.5 + 置顶帖数 * 0.3 + 原创帖数 * 0.2
+```
+
+排名 | 逼值 | 用户
+-|-|-
+1 | 0.8 | 我好南啊
+2 | 0.6 | 我太兔了
+3 | 0.6 | 雪莲_xvelian
+4 | 0.3 | 广药
+5 | 0.1 | kevin2018
+6 | 0.1 | wcw111www
+7 | 0.1 | 鱼秋
+8 | 0.1 | 怪人长长
+9 | 0.1 | 打则的妖梦
+10 | 0.1 | 斩魂最6
