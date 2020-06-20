@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio2Minecraft</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand" onClick="load0()">
+                    <a href="index.html">
+                        Audio2Minecraft
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-home"></i> 主页 <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header" style="text-align:center;">主页索引</li>
+                        <li><a href="index.html">A2M</a></li>
+                        <li><a href="index.html#dll">A2M.Dll</a></li>
+                        <li><a href="index.html#mineaudio">MineAudio</a></li>
+                        <li><a href="index.html#extra">附</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-windows"></i> A2MUI
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header" style="text-align:center;">A2M的图形化处理程序</li>
+                        <li><a href="import.html">导入</a></li>
+                        <li><a href="midi.html">Midi设置</a></li>
+                        <li><a href="wav.html">Wave设置</a></li>
+                        <li><a href="public.html">全局设置</a></li>
+                        <li><a href="lrc.html">歌词设置</a></li>
+                        <li><a href="exps.html">导出设置</a></li>
+                        <li><a href="extension.html">扩展内容</a></li>
+                        <li><a href="export.html">导出</a></li>
+                        <li><a href="http://www.mcbbs.net/thread-842175-1-1.html" target="_blank">Datapack</a>
+                        <li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gears"></i> A2M.dll
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header" style="text-align:center;">A2M的类库</li>
+                        <li><a href="dll1.html">基本流</a></li>
+                        <li><a href="dll2.html">计分板接口</a></li>
+                        <li><a href="dll3.html">聊天栏音频可视化</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-paper-plane-o"></i>
+                        项目示例 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header" style="text-align:center;">示例工程</li>
+                        <li><a href="demo1.html">Wet Hand - C418</a></li>
+                        <li><a href="demo2.html">U.N. Owen was Her? - ZUN</a></li>
+                        <li><a href="demo3.html">Faded - AlanWalker</a></li>
+                        <li><a href="demo4.html">打上花火 - DAOKO×米津玄師</a></li>
+                        <li><a href="demo5.html">Bad Apple - NBS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="executivemidi.html"><img src="assets/executive-midi.png"
+                            style="width:16px;margin-bottom:5px;"></img> ExecutiveMidi</a>
+                </li>
+                <li>
+                    <a href="guide.html"><i class="fa fa-fw fa-book"></i> 向导</a>
+                </li>
+                <li>
+                    <a href="FAQ.html"><i class="fa fa-fw fa-question-circle"></i> 常见问题</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tremblestarman/MineAudio"><i class="fa fa-fw fa-github"></i> Github</a>
+                </li>
+                <li>
+                    <a href="download.html"><i class="fa fa-fw fa-download"></i> 下载</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header" style="text-align:center;">向导</h1>
+                        <h3>
+                            <div class="fa fa-fw fa-tags"></div>初来乍到
+                        </h3>
+                        <p>A2M支持用如下格式的文件生成命令序列：</p>
+                        <blockquote class="lead" style="font-size:12px;"><ul>
+                            <li>.mid：音乐设备数字接口文件。相当于乐谱，有它才能生成红石音乐。</li>
+                            <li>.wav：波形文件，支持任意格式。仅用于波形可视化。</li>
+                            <li>.lrc：歌词文件，只支持标准格式<code>[分:秒.毫秒] 歌词</code>。仅用于歌词效果。</li>
+                        </ul></blockquote>
+                        <p>（命令序列在1.12-版本以命令方块流的形式呈现；在1.13+版本以数据包的方式实现。）</p>
+                        <p>你可能还需要了解以下概念：<code>playsound</code>、<code>命令方块基础</code>以及<code>MCedit</code>（若版本为1.13+，则需了解<code>数据包</code>）。</br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 若你刚刚下载A2M并且感觉无从下手，不妨先去看看demo，其中有手把手的图文教程：</p>
+                        <ul>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="demo1.html"></a> 简单Midi的一键生成</h4>
+                                <p>使用本软件生成红石音乐的基本流程。在此演示中使用的是手动设置。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="demo2.html"></a> 复杂Midi的快速生成 *</h4>
+                                <p>使用本软件生成红石音乐的基本流程。在此演示中使用的是自动补全。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="demo4.html"></a> 让歌词Fly</h4>
+                                <p>教你如何为红石音乐添加歌词。</p>
+                            </li>
+                        </ul>
+                        <hr/><h3>
+                            <div class="fa fa-fw fa-tags"></div>进阶之旅
+                        </h3>
+                        <p>在了解了基本操作后，面对A2M内复杂的设置和选项，你可以按需阅读如下的操作指南：</p>
+                        <ul>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="import.html"></a> 导入</h4>
+                                <p>导入文件的简要介绍。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="midi.html"></a> Midi设置 *</h4>
+                                <p>Midi设置的详解。包括如何使用控件，切换显示，以及参数的设置方法。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="wav.html"></a> Wave设置</h4>
+                                <p>Wave设置的简要介绍。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="public.html"></a> 全局设置</h4>
+                                <p>利用宏操作来简化过程。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="lrc.html"></a> 歌词设置</h4>
+                                <p>歌词设置的简要介绍。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="exps.html"></a> 导出设置 *</h4>
+                                <p>导出设置的详解。包括序列设置，以及对红石音乐时间、节奏相关的处理，和与歌词相关的设置。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="export.html"></a> 导出</h4>
+                                <p>导出的简要介绍。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="http://www.mcbbs.net/thread-842175-1-1.html"></a> 数据包(Datapack) *</h4>
+                                <p>导出为数据包的流程。</p>
+                            </li>
+                        </ul>
+                        <hr/><h3>
+                            <div class="fa fa-fw fa-tags"></div>更上一层
+                        </h3>
+                        <p>A2M不是专注音频的软件，A2M还有额外的功能可用于视效等其他功能的开发。</p>
+                        <ul>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="demo3.html"></a> 音频可视化 初见 *</h4>
+                                <p>介绍A2M中采样的概念，以及可视化的具体流程。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="extension.html"></a> 扩展内容</h4>
+                                <p>扩展内容的基本介绍。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="executivemidi.html"></a> 自定义化工具ExecutiveMidi</h4>
+                                <p>详见ExecutiveMidi的主页。</p>
+                            </li>
+                        </ul>
+                        <p>（注：上述内容都可用数据包导出）</p>
+                        <hr/><h3>
+                            <div class="fa fa-fw fa-tags"></div>成为开发者
+                        </h3>
+                        <p>A2M功能仍然有局限性，但A2M.dll则可完全胜任如今Minecraft中的红石音乐、黑石音乐、可视化音乐的开发。</p>
+                        <ul>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="demo3.html"></a> 用代码生成红石音乐的基本流程 *</h4>
+                                <p>几个关键方法，以及基本流程的介绍。内含脚本模板。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="extension.html"></a> 结合Minecraft元素表现音频可视化</h4>
+                                <p>脚本生成，并通过计分板接口实现音频可视化。</p>
+                            </li>
+                            <li>
+                                <h4><a class="fa fa-fw fa-external-link" href="executivemidi.html"></a> 结合聊天栏与字符串表现音频可视化</h4>
+                                <p>直接通过代码实现音频可视化。</p>
+                            </li>
+                        </ul>
+                        <p>想要了解更多，或一探底层代码，可结合<a target="_blank" href="https://github.com/tremblestarman/MineAudio/tree/master/Dll">Github</a>食用。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#wrapper').toggleClass('toggled');
+            });
+        });
+    </script>
+</body>
+
+</html>
